@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/** Reminder Font Sizes **/
+.hxxl {
+    font-size: 56px;
+}
+
+.hxl {
+    font-size: 48px;
+}
+
+.hl {
+    font-size: 40px;
+}
+
+.hm {
+    font-size: 33px;
+}
+
+.hs {
+    font-size: 32px;
+}
+
+.hxs {
+    font-size: 24px;
+}
+
+.hxxs {
+    font-size: 20px;
+}
+
+.hxxs {
+    font-size: 16px;
+}
+
+.bodyl {
+    font-size: 18px;
+}
+
+.bodym {
+    font-size: 16px;
+}
+
+.bodys {
+    font-size: 14px;
+}
+
+.bodyxs {
+    font-size: 12px;
+}
+
+/** Styles **/
+body {
+    font-family: Poppins, sans-serif;
+    color: #121010;
+    background-color: #F5E9E2;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+    color: #121010;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+section {
+    padding: 0 96px;
+    margin-bottom: 112px;
+}
+.logo-meeplin {
+    width: 115px;
+    height: 60px;
+    vertical-align: middle;
+}
+.fa-chevron-right {
+    margin-left: 8px;
+}
+.avatar {
+    width: 48px;
+    height: 48px;
+}
+
+/** Header **/
+header {
+    padding: 71px 96px 103px 79px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-links {
+    display: flex;
+    gap: 39px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 43px;
+    align-items: center;
+}
+.btns-container {
+    display: flex;
+    gap: 23px;
+    align-items: center;
+}
+.btn-primary {
+    background-color: #FE7F2D;
+    color: white;
+    padding: 8px 20px;
+    border: #FE7F2D 1px solid;
+    border-radius: 40px;
+}
+.btn-secondary {
+    padding: 8px 20px;
+    border: #FE7F2D 1px solid;
+    border-radius: 40px;
+}
+
+/** Hero **/
+.hero {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+.hero-text {
+    text-align: left;
+}
+.hero-desc {
+    margin-top: 21px;
+}
+.hero-btns {
+    margin-top: 20px;
+}
+.hero-image {
+    width: 612px;
+    height: 612px;
+    object-fit: cover;
+}
+
+/** How It Works **/
+.how-it-works h2 {
+    width: 824px;
+    margin: 0 auto 56px auto;
+    text-align: center;
+}
+
+.steps {
+    list-style: none;
+    display: flex;
+    gap: 48px;
+    text-align: center;
+}
+.steps li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.steps-icon {
+    font-size: 48px;
+    color: #FE7F2D;
+}
+
+
+/** Last Blog Posts **/
+.blog h2 {
+    text-align: center;
+    margin: 0 auto 47px auto;
+}
+.articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+.article-image {
+    width: 100%;
+    height: 296px;
+    object-fit: cover;
+}
+.article-content {
+    margin: 24px 0;
+}
+.bold {
+    font-weight: bold;
+}
+.article-cat {
+    margin-bottom: 8px;
+}
+.article-title {
+    margin-bottom: 8px;
+}
+.article-data {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.partners {
+    display: flex;
+    gap: 130px;
+    align-items: center;
+}
+.partners-image {
+    width: 612px;
+    height: 453px;
+}
+.partners-desc {
+    margin: 20px 0;
+}
+
+
+/** Testimonials **/
+.testimonials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonial-content {
+    width: 47%;
+}
+.testimonials blockquote {
+    padding: 32px;
+    border: 1px solid #FE7F2D;
+    border-radius: 20px;
+    margin-bottom: 28px;
+}
+.testimonial-rating {
+    margin-bottom: 24px;
+}
+.fa-star {
+    color: #FE7F2D;
+}
+.testimonial-quote {
+    margin-bottom: 24px;
+}
+.testimonial-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonial-dots {
+    font-size: 8px;
+    display: flex;
+    gap: 8px;
+}
+.dot-full {
+    color: #FE7F2D;
+}
+.dot-empty {
+    color: #121010;
+    opacity: 0.2;
+}
+.testimonial-btns {
+    display: flex;
+    gap: 16px;
+    font-size: 24px;
+}
+.testimonial-btn {
+    padding: 5px 12px;
+    border: 1px solid #FE7F2D;
+    border-radius: 50%;
+}
+
+
+/** About **/
+.about {
+    background: #444444;
+    color: white;
+    padding: 54px 106px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 96px;
+    margin-right: 96px;
+}
+.about-btn {
+    background-color: white;
+    color: black;
+    height: fit-content;
+    padding: 12px 24px;
+}
+
+
+/** Footer **/
+footer {
+    padding: 0 94px 63px 80px;
+}
+.footer-top {
+    display: flex;
+    margin-bottom: 76px;
+}
+.newsletter {
+    width: 60%;
+}
+.newsletter .logo-meeplin {
+    margin-bottom: 36px;
+}
+.footer-lists {
+    width: 100%;
+    display: flex;
+}
+.footer-lists > div {
+    flex: 1;
+}
+.footer-lists h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+.footer-lists li {
+    padding: 8px 0;
+}
+.fa-facebook, .fa-instagram {
+    font-size: 24px;
+    margin-right: 12px;
+}
+.footer-bottom {
+    border-top: 1px solid #121010;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+}
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
