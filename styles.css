@@ -84,6 +84,9 @@ nav {
 .btn-secondary:hover {
     background-color: #F5E9E2;
 }
+.burger {
+    display: none;
+}
 
 /** Hero **/
 .hero {
@@ -381,6 +384,13 @@ footer {
     text-decoration: underline;
 }
 
+
+/** PAGE ARTICLE **/
+.article-hero {
+    padding: 0;
+    width: 100%;
+}
+
 @media (max-width: 1233px) {
     section {
         padding: 0 48px;
@@ -495,6 +505,14 @@ footer {
     }
     header {
         padding: 71px 48px 103px 48px;
+    }
+    .burger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #121010;
+        cursor: pointer;
     }
     .hero {
         flex-direction: column-reverse;
@@ -771,7 +789,7 @@ footer {
     .newsletter-form {
         margin: 20px 0 12px 0;
         flex-direction: column;
-        width: 75%;
+        width: 100%;
         max-width: 400px;
     }
     .newsletter-form input {
