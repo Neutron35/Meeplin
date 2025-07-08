@@ -4,55 +4,6 @@
     padding: 0;
 }
 
-/** Reminder Font Sizes **/
-.hxxl {
-    font-size: 56px;
-}
-
-.hxl {
-    font-size: 48px;
-}
-
-.hl {
-    font-size: 40px;
-}
-
-.hm {
-    font-size: 33px;
-}
-
-.hs {
-    font-size: 32px;
-}
-
-.hxs {
-    font-size: 24px;
-}
-
-.hxxs {
-    font-size: 20px;
-}
-
-.hxxs {
-    font-size: 16px;
-}
-
-.bodyl {
-    font-size: 18px;
-}
-
-.bodym {
-    font-size: 16px;
-}
-
-.bodys {
-    font-size: 14px;
-}
-
-.bodyxs {
-    font-size: 12px;
-}
-
 /** Styles **/
 body {
     font-family: Poppins, sans-serif;
@@ -120,10 +71,18 @@ nav {
     border: #FE7F2D 1px solid;
     border-radius: 40px;
 }
+.btn-primary:hover {
+    background-color: #7F4017;
+    border: #7F4017 1px solid;
+}
 .btn-secondary {
     padding: 8px 20px;
     border: #FE7F2D 1px solid;
     border-radius: 40px;
+    background-color: white;
+}
+.btn-secondary:hover {
+    background-color: #F5E9E2;
 }
 
 /** Hero **/
@@ -136,15 +95,19 @@ nav {
 .hero-text {
     text-align: left;
 }
+.hero-text h2 {
+    font-size: 48px;
+}
 .hero-desc {
     margin-top: 21px;
+    font-size: 18px;
 }
 .hero-btns {
     margin-top: 20px;
 }
 .hero-image {
-    width: 612px;
-    height: 612px;
+    width: 49%;
+    aspect-ratio: 1/1;
     object-fit: cover;
 }
 
@@ -153,57 +116,87 @@ nav {
     width: 824px;
     margin: 0 auto 56px auto;
     text-align: center;
+    font-size: 40px;
 }
 
 .steps {
     list-style: none;
-    display: flex;
-    gap: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     text-align: center;
+    column-gap: 48px;
+    row-gap: 24px;
+    justify-items: center;
+    align-items: start;
 }
 .steps li {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    display: contents;
 }
 .steps-icon {
     font-size: 48px;
     color: #FE7F2D;
+    grid-row: 1;
+}
+.steps li h3 {
+    font-size: 24px;
+    font-weight: bold;
+    grid-row: 2;
+    margin: 0;
+    align-self: center;
 }
 
+.steps p {
+    grid-row: 3;
+    margin: 0;
+}
+
+.steps a {
+    grid-row: 4;
+    margin-top: 16px;
+    align-self: end;
+}
 
 /** Last Blog Posts **/
 .blog h2 {
     text-align: center;
     margin: 0 auto 47px auto;
+    font-size: 40px;
 }
 .articles {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+    row-gap: 8px;
+}
+.articles .article {
+    display: contents;
 }
 .article-image {
+    grid-row: 1;
     width: 100%;
-    height: 296px;
+    aspect-ratio: 50/37;
     object-fit: cover;
 }
-.article-content {
-    margin: 24px 0;
+.article-cat {
+    grid-row: 2;
+    font-size: 14px;
+    margin-top: 16px;
 }
 .bold {
     font-weight: bold;
 }
-.article-cat {
-    margin-bottom: 8px;
-}
 .article-title {
-    margin-bottom: 8px;
+    grid-row: 3;
+    font-size: 24px;
+    margin-bottom: 0;
 }
 .article-desc {
+    grid-row: 4;
     font-size: 15px;
+    margin-bottom: 16px;
 }
 .article-data {
+    grid-row: 5;
     display: flex;
     gap: 16px;
     align-items: center;
@@ -218,8 +211,12 @@ nav {
     align-items: center;
 }
 .partners-image {
-    width: 612px;
-    height: 453px;
+    width: 49%;
+    aspect-ratio: 204/151;
+    object-fit: cover;
+}
+.partners-text h2 {
+    font-size: 40px;
 }
 .partners-desc {
     margin: 20px 0;
@@ -231,6 +228,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.testimonial-header h2 {
+    font-size: 40px;
+}
+.testimonial-header p {
+    font-size: 18px;
 }
 .testimonial-content {
     width: 47%;
@@ -292,6 +295,12 @@ nav {
     margin-left: 96px;
     margin-right: 96px;
 }
+.about-text h2 {
+    font-size: 33px;
+}
+.about-text p {
+    font-size: 20px;
+}
 .about-btn {
     background-color: white;
     color: black;
@@ -310,15 +319,18 @@ footer {
     justify-content: space-between;
 }
 .newsletter {
-    width: 44%;
+    width: 41%;
 }
 .newsletter .logo-meeplin {
     margin-bottom: 36px;
 }
 .newsletter-form {
     margin: 24px 0 12px 0;
+    width: 100%;
+    display: flex;
 }
 .newsletter-form input{
+    flex-grow: 1;
     margin-right: 16px;
     padding: 12px;
     font-size: 17px;
@@ -327,6 +339,7 @@ footer {
 .newsletter-form button {
     font-size: 17px;
     padding: 12px 24px;
+    background-color: transparent;
 }
 .privacy-policy {
     font-size: 12px;
@@ -366,4 +379,418 @@ footer {
 }
 .footer-links a {
     text-decoration: underline;
+}
+
+@media (max-width: 1233px) {
+    section {
+        padding: 0 48px;
+    }
+    header {
+        padding: 71px 48px 103px 48px;
+        font-size: 14px;
+    }
+    .nav-links {
+        gap: 20px;
+    }
+    .btns-container {
+        gap: 16px;
+    }
+    .hero {
+        gap: 60px;
+    }
+    .hero-text h2 {
+        font-size: 36px;
+    }
+    .hero-desc {
+        font-size: 16px;
+    }
+    .hero-btns {
+        margin-top: 16px;
+    }
+    .how-it-works h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 36px;
+        margin: 0 0 27px 0;
+    }
+    .steps {
+        gap: 32px;
+    }
+    .steps li {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .blog h2 {
+        font-size: 36px;
+    }
+    .partners-text h2 {
+        font-size: 36px;
+    }
+    .testimonial-header h2 {
+        font-size: 36px;
+    }
+    .testimonial-header p {
+        font-size: 16px;
+    }
+    .testimonial-quote {
+        font-size: 14px;
+    }
+    .about {
+        padding: 54px 48px;
+    }
+    .about-text h2 {
+        font-size: 28px;
+    }
+    .about-text p {
+        font-size: 16px;
+    }
+    .about-btn {
+        font-size: 14px;
+    }
+    .newsletter-phrase {
+        font-size: 14px;
+    }
+    .newsletter-form input {
+        font-size: 16px;
+    }
+    .newsletter-form button {
+        font-size: 16px;
+    }
+    .privacy-policy {
+        font-size: 11px;
+    }
+    footer {
+        padding: 0 48px 59px 48px;
+    }
+    .newsletter-form input {
+        font-size: 16px;
+    }
+    .newsletter-form button {
+        font-size: 16px;
+    }
+    .footer-lists h2 {
+        font-size: 14px;
+    }
+    .footer-lists li {
+        font-size: 14px;
+        padding: 4px 0;
+    }
+    .fa-facebook, .fa-instagram {
+        font-size: 18px;
+    }
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .top-links {
+        display: none;
+    }
+    section {
+        padding: 0 48px;
+        margin-bottom: 72px;
+    }
+    header {
+        padding: 71px 48px 103px 48px;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 19px;
+    }
+    .hero-desc {
+        font-size: 14px;
+        text-align: center;
+    }
+    .hero-text h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .hero-btns {
+        margin-top: 19px;
+        justify-content: center;
+    }
+    .hero-image {
+        width: 100%;
+    }
+    .how-it-works h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        margin: 0 0 27px 0;
+    }
+    .steps {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 46px;
+    }
+    .steps li p {
+        font-size: 14px;
+    }
+    .steps a {
+        align-self: center;
+    }
+    .blog h2 {
+        font-size: 32px;
+    }
+    .articles {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .articles .article{
+        display: block;
+    }
+
+    .article-image {
+        width: 100%;
+        aspect-ratio: 88/65;
+    }
+
+    .article-cat,
+    .article-title,
+    .article-desc,
+    .article-data {
+        grid-row: unset;
+    }
+    .partners {
+        flex-direction: column;
+        gap: 48px;
+    }
+    .partners-image {
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+    .partners-text h2 {
+        font-size: 32px;
+    }
+    .testimonials {
+        flex-direction: column;
+        gap: 48px;
+    }
+    .testimonial-header h2 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+    .testimonial-header p {
+        font-size: 16px;
+    }
+    .testimonial-content {
+        width: 100%;
+    }
+    .about {
+        margin: 0 25px 52px 25px;
+        padding: 94px 48px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    .about-text p {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+    footer {
+        padding: 0 45px 59px 45px;
+    }
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+        gap: 48px;
+        margin-bottom: 48px;
+    }
+    .newsletter {
+        width: 100%;
+    }
+    .newsletter .logo-meeplin {
+        margin-bottom: 20px;
+    }
+    .newsletter-form {
+        margin: 20px 0 12px 0;
+        flex-direction: column;
+        width: 75%;
+        max-width: 400px;
+    }
+    .newsletter-form input {
+        margin: 0 0 16px 0;
+        width: 100%;
+    }
+    .newsletter-form button {
+        width: 100%;
+    }
+    .footer-lists {
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer-bottom {
+        flex-direction: column-reverse;
+        padding-top: 24px;
+        gap: 32px;
+    }
+    .footer-links {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-links {
+        display: none;
+    }
+    section {
+        padding: 0 48px;
+        margin-bottom: 72px;
+    }
+    header {
+        padding: 71px 48px 103px 48px;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 19px;
+    }
+    .hero-desc {
+        font-size: 14px;
+        text-align: center;
+    }
+    .hero-text h2 {
+        font-size: 40px;
+        text-align: left;
+    }
+    .hero-btns {
+        margin-top: 19px;
+        justify-content: center;
+    }
+    .hero-image {
+        width: 100%;
+    }
+    .how-it-works h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        margin: 0 0 27px 0;
+    }
+    .steps {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 46px;
+    }
+    .steps li p {
+        font-size: 14px;
+    }
+    .steps a {
+        align-self: center;
+    }
+    .blog h2 {
+        font-size: 32px;
+    }
+    .articles {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .articles .article{
+        display: block;
+    }
+
+    .article-image {
+        width: 100%;
+        aspect-ratio: 88/65;
+    }
+
+    .article-cat,
+    .article-title,
+    .article-desc,
+    .article-data {
+        grid-row: unset;
+    }
+    .partners {
+        flex-direction: column;
+        gap: 48px;
+    }
+    .partners-image {
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+    .partners-text h2 {
+        font-size: 32px;
+    }
+    .testimonials {
+        flex-direction: column;
+        gap: 48px;
+    }
+    .testimonial-header h2 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+    .testimonial-header p {
+        font-size: 16px;
+    }
+    .testimonial-content {
+        width: 100%;
+    }
+    .about {
+        margin: 0 25px 52px 25px;
+        padding: 94px 48px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    .about-text p {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+    footer {
+        padding: 0 45px 59px 45px;
+    }
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+        gap: 48px;
+        margin-bottom: 48px;
+    }
+    .newsletter {
+        width: 100%;
+    }
+    .newsletter .logo-meeplin {
+        margin-bottom: 20px;
+    }
+    .newsletter-form {
+        margin: 20px 0 12px 0;
+        flex-direction: column;
+        width: 75%;
+        max-width: 400px;
+    }
+    .newsletter-form input {
+        margin: 0 0 16px 0;
+        width: 100%;
+    }
+    .newsletter-form button {
+        width: 100%;
+    }
+    .footer-lists {
+        flex-direction: column;
+        width: 100%;
+    }
+    .footer-bottom {
+        flex-direction: column-reverse;
+        padding-top: 24px;
+        gap: 32px;
+    }
+    .footer-links {
+        flex-direction: column;
+    }
 }
