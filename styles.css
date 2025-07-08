@@ -111,6 +111,7 @@ nav {
     display: flex;
     gap: 23px;
     align-items: center;
+    font-size: 15px;
 }
 .btn-primary {
     background-color: #FE7F2D;
@@ -199,12 +200,18 @@ nav {
 .article-title {
     margin-bottom: 8px;
 }
+.article-desc {
+    font-size: 15px;
+}
 .article-data {
     display: flex;
     gap: 16px;
     align-items: center;
+    font-size: 15px;
 }
 
+
+/** Partners **/
 .partners {
     display: flex;
     gap: 130px;
@@ -236,6 +243,8 @@ nav {
 }
 .testimonial-rating {
     margin-bottom: 24px;
+    display: flex;
+    gap: 4px;
 }
 .fa-star {
     color: #FE7F2D;
@@ -298,38 +307,63 @@ footer {
 .footer-top {
     display: flex;
     margin-bottom: 76px;
+    justify-content: space-between;
 }
 .newsletter {
-    width: 60%;
+    width: 44%;
 }
 .newsletter .logo-meeplin {
     margin-bottom: 36px;
 }
-.footer-lists {
-    width: 100%;
-    display: flex;
+.newsletter-form {
+    margin: 24px 0 12px 0;
 }
-.footer-lists > div {
-    flex: 1;
+.newsletter-form input{
+    margin-right: 16px;
+    padding: 12px;
+    font-size: 17px;
+    border: 1px solid #FE7F2D;
+}
+.newsletter-form button {
+    font-size: 17px;
+    padding: 12px 24px;
+}
+.privacy-policy {
+    font-size: 12px;
+}
+.footer-lists {
+    display: flex;
+    gap: 40px;
+}
+.meeplin, .customer-service, .social {
+    padding-right: 30px;
 }
 .footer-lists h2 {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 16px;
 }
 .footer-lists li {
     padding: 8px 0;
 }
+.social-links a {
+    display: flex;
+    align-items: center;
+}
 .fa-facebook, .fa-instagram {
-    font-size: 24px;
     margin-right: 12px;
+    font-size: 20px;
 }
 .footer-bottom {
     border-top: 1px solid #121010;
     display: flex;
     justify-content: space-between;
     padding-top: 32px;
+    font-size: 14px;
 }
 .footer-links {
     display: flex;
     gap: 24px;
+}
+.footer-links a {
+    text-decoration: underline;
 }
