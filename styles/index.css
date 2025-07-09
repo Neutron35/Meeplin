@@ -1,879 +1,833 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-/** Styles **/
-body {
-    font-family: Poppins, sans-serif;
-    color: #121010;
-    background-color: #F5E9E2;
-    max-width: 1440px;
-    margin: 0 auto;
-    font-size: 16px;
-}
-a {
-    text-decoration: none;
-    color: #121010;
-}
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-section {
-    padding: 0 48px;
-    margin-bottom: 72px;
-}
-.logo-meeplin {
-    width: 115px;
-    height: 60px;
-    vertical-align: middle;
-}
-.fa-chevron-right {
-    margin-left: 8px;
-}
-.avatar {
-    width: 48px;
-    height: 48px;
-}
-
-/** Header **/
-header {
-    padding: 71px 48px 103px 48px;
-    position: relative;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.top-links {
-    display: none;
-}
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 43px;
-    align-items: center;
-}
-.btns-container {
-    display: flex;
-    gap: 23px;
-    align-items: center;
-    font-size: 15px;
-}
-.btn-primary {
-    background-color: #FE7F2D;
-    color: white;
-    padding: 8px 20px;
-    border: #FE7F2D 1px solid;
-    border-radius: 40px;
-}
-.btn-primary:hover {
-    background-color: #7F4017;
-    border: #7F4017 1px solid;
-}
-.btn-secondary {
-    padding: 8px 20px;
-    border: #FE7F2D 1px solid;
-    border-radius: 40px;
-    background-color: white;
-}
-.btn-secondary:hover {
-    background-color: #F5E9E2;
-}
-.mobile-header {
-    display: flex;
-    gap: 10px;
-}
-.burger {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #FE7F2D;
-    cursor: pointer;
-    z-index: 1001;
-    transition: color 0.3s ease;
-}
-.burger:hover {
-    color: #7F4017;
-}
-
-/* Menu mobile */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(245, 233, 226, 0.98);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.mobile-menu.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.mobile-menu .nav-links {
-    flex-direction: column;
-    gap: 32px;
-    margin-bottom: 48px;
-    text-align: center;
-}
-
-.mobile-menu .nav-links li {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
-    transition-delay: 0.1s;
-}
-
-.mobile-menu.active .nav-links li {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.mobile-menu .nav-links li:nth-child(1) { transition-delay: 0.1s; }
-.mobile-menu .nav-links li:nth-child(2) { transition-delay: 0.2s; }
-.mobile-menu .nav-links li:nth-child(3) { transition-delay: 0.3s; }
-.mobile-menu .nav-links li:nth-child(4) { transition-delay: 0.4s; }
-
-.mobile-menu .nav-links a {
-    font-size: 24px;
-    font-weight: 500;
-    color: #121010;
-    transition: color 0.3s ease;
-}
-
-.mobile-menu .nav-links a:hover {
-    color: #FE7F2D;
-}
-
-.mobile-menu .btns-container {
-    flex-direction: column;
-    gap: 16px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
-    transition-delay: 0.5s;
-}
-
-.mobile-menu.active .btns-container {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.mobile-menu .btns-container a {
-    font-size: 18px;
-    padding: 12px 32px;
-    min-width: 200px;
-    text-align: center;
-}
-
-/* Animation du burger */
-.burger .menu-icon {
-    transition: transform 0.3s ease;
-}
-
-.burger.active .menu-icon {
-    transform: rotate(90deg);
-}
-
-/* === Compte (mobile) === */
-.account-btn {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #FE7F2D;
-    cursor: pointer;
-}
-.account-btn:focus,
-.account-btn:hover {
-    color: #7F4017;
-}
-
-/** Hero **/
-.hero {
-    text-align: center;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 19px;
-}
-.hero-text {
-    text-align: left;
-}
-.hero-text h2 {
-    font-size: 40px;
-    text-align: left;
-}
-.hero-desc {
-    margin-top: 21px;
-    font-size: 14px;
-    text-align: left;
-}
-.hero-btns {
-    margin-top: 19px;
-    justify-content: left;
-}
-.hero-image {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
-/** How It Works **/
-.how-it-works h2 {
-    width: 100%;
-    text-align: left;
-    font-size: 32px;
-    margin: 0 0 27px 0;
-}
-
-.steps {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 46px;
-    text-align: center;
-}
-.steps li {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.steps-icon {
-    font-size: 48px;
-    color: #FE7F2D;
-}
-.steps li h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.steps p {
-    margin: 0;
-    font-size: 14px;
-}
-
-.steps a {
-    margin-top: 16px;
-    align-self: center;
-}
-
-/** Last Blog Posts **/
-.blog h2 {
-    text-align: left;
-    margin: 0 auto 47px auto;
-    font-size: 32px;
-}
-.articles {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-}
-.articles .article {
-    display: block;
-}
-.article-image {
-    width: 100%;
-    aspect-ratio: 88/65;
-    object-fit: cover;
-}
-.article-cat {
-    font-size: 14px;
-    margin-top: 16px;
-}
-.bold {
-    font-weight: bold;
-}
-.article-title {
-    font-size: 24px;
-    margin-bottom: 0;
-}
-.article-desc {
-    font-size: 15px;
-    margin-bottom: 16px;
-}
-.article-data {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    font-size: 15px;
-}
-
-
-/** Partners **/
-.partners {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-    align-items: center;
-}
-.partners-image {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-.partners-text h2 {
-    font-size: 32px;
-}
-.partners-desc {
-    margin: 20px 0;
-}
-
-
-/** Testimonials **/
-.testimonials {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-}
-.testimonial-header h2 {
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-.testimonial-header p {
-    font-size: 16px;
-}
-.testimonial-content {
-    width: 100%;
-}
-.testimonials blockquote {
-    padding: 32px;
-    border: 1px solid #FE7F2D;
-    border-radius: 20px;
-    margin-bottom: 28px;
-}
-.testimonial-rating {
-    margin-bottom: 24px;
-    display: flex;
-    gap: 4px;
-}
-.fa-star {
-    color: #FE7F2D;
-}
-.testimonial-quote {
-    margin-bottom: 24px;
-    font-size: 14px;
-}
-.testimonial-slider {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.testimonial-dots {
-    font-size: 8px;
-    display: flex;
-    gap: 8px;
-}
-.dot-full {
-    color: #FE7F2D;
-}
-.dot-empty {
-    color: #121010;
-    opacity: 0.2;
-}
-.testimonial-btns {
-    display: flex;
-    gap: 16px;
-    font-size: 24px;
-}
-.testimonial-btn {
-    padding: 5px 12px;
-    border: 1px solid #FE7F2D;
-    border-radius: 50%;
-}
-
-
-/** About **/
-.about {
-    background: #444444;
-    color: white;
-    padding: 94px 48px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 0 25px 52px 25px;
-}
-.about-text h2 {
-    font-size: 24px;
-    margin-bottom: 24px;
-}
-.about-text p {
-    font-size: 16px;
-    margin-bottom: 24px;
-}
-.about-btn {
-    background-color: white;
-    color: black;
-    height: fit-content;
-    padding: 12px 24px;
-}
-
-
-/** Footer **/
-footer {
-    padding: 0 45px 59px 45px;
-}
-.footer-top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: unset;
-    gap: 48px;
-    margin-bottom: 48px;
-}
-.newsletter {
-    width: 100%;
-}
-.newsletter .logo-meeplin {
-    margin-bottom: 20px;
-}
-.newsletter-form {
-    margin: 20px 0 12px 0;
-    flex-direction: column;
-    width: 100%;
-    max-width: 400px;
-    display: flex;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0
+}
+body{
+    font-family:Poppins,sans-serif;
+    color:#121010;
+    background-color:#f5e9e2;
+    max-width:1440px;
+    margin:0 auto;
+    font-size:16px
+}
+a{
+    text-decoration:none;
+    color:#121010
+}
+ul{
+    list-style:none;
+    padding:0;
+    margin:0
+}
+section{
+    padding:0 48px;
+    margin-bottom:72px
+}
+.logo-meeplin{
+    width:115px;
+    height:60px;
+    vertical-align:middle
+}
+.fa-chevron-right{
+    margin-left:8px
+}
+.avatar{
+    width:48px;
+    height:48px
+}
+header{
+    padding:71px 48px 103px 48px;
+    position:relative
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+.top-links{
+    display:none
+}
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:43px;
+    align-items:center
+}
+.btns-container{
+    display:flex;
+    gap:23px;
+    align-items:center;
+    font-size:15px
+}
+.btn-primary{
+    background-color:#fe7f2d;
+    color:#fff;
+    padding:8px 20px;
+    border:#fe7f2d 1px solid;
+    border-radius:40px
+}
+.btn-primary:hover{
+    background-color:#7f4017;
+    border:#7f4017 1px solid
+}
+.btn-secondary{
+    padding:8px 20px;
+    border:#fe7f2d 1px solid;
+    border-radius:40px;
+    background-color:#fff
+}
+.btn-secondary:hover{
+    background-color:#f5e9e2
+}
+.mobile-header{
+    display:flex;
+    gap:10px
+}
+.burger{
+    display:block;
+    background:0 0;
+    border:none;
+    font-size:24px;
+    color:#fe7f2d;
+    cursor:pointer;
+    z-index:1001;
+    transition:color .3s ease
+}
+.burger:hover{
+    color:#7f4017
+}
+.mobile-menu{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background-color:rgba(245,233,226,.98);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    visibility:hidden;
+    transition:all .4s cubic-bezier(.4,0,.2,1)
+}
+.mobile-menu .nav-links{
+    flex-direction:column;
+    gap:32px;
+    margin-bottom:48px;
+    text-align:center
+}
+.mobile-menu .nav-links li{
+    opacity:0;
+    transform:translateY(20px);
+    transition:all .4s ease;
+    transition-delay:.1s
+}
+.mobile-menu .nav-links li:nth-child(1){
+    transition-delay:.1s
+}
+.mobile-menu .nav-links li:nth-child(2){
+    transition-delay:.2s
+}
+.mobile-menu .nav-links li:nth-child(3){
+    transition-delay:.3s
+}
+.mobile-menu .nav-links li:nth-child(4){
+    transition-delay:.4s
+}
+.mobile-menu .nav-links a{
+    font-size:24px;
+    font-weight:500;
+    color:#121010;
+    transition:color .3s ease
+}
+.mobile-menu .nav-links a:hover{
+    color:#fe7f2d
+}
+.mobile-menu .btns-container{
+    flex-direction:column;
+    gap:16px;
+    opacity:0;
+    transform:translateY(20px);
+    transition:all .4s ease;
+    transition-delay:.5s
+}
+.mobile-menu .btns-container a{
+    font-size:18px;
+    padding:12px 32px;
+    min-width:200px;
+    text-align:center
+}
+.burger .menu-icon{
+    transition:transform .3s ease
+}
+.account-btn{
+    display:block;
+    background:0 0;
+    border:none;
+    font-size:24px;
+    color:#fe7f2d;
+    cursor:pointer
+}
+.account-btn:focus,.account-btn:hover{
+    color:#7f4017
+}
+.hero{
+    text-align:center;
+    display:flex;
+    flex-direction:column-reverse;
+    align-items:center;
+    gap:19px
+}
+.hero-text{
+    text-align:left
+}
+.hero-text h2{
+    font-size:40px;
+    text-align:left
+}
+.hero-desc{
+    margin-top:21px;
+    font-size:14px;
+    text-align:left
+}
+.hero-btns{
+    margin-top:19px;
+    justify-content:left
+}
+.hero-image{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover
+}
+.how-it-works h2{
+    width:100%;
+    text-align:left;
+    font-size:32px;
+    margin:0 0 27px 0
+}
+.steps{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:46px;
+    text-align:center
+}
+.steps li{
+    display:flex;
+    flex-direction:column;
+    gap:16px
+}
+.steps-icon{
+    font-size:48px;
+    color:#fe7f2d
+}
+.steps li h3{
+    font-size:24px;
+    font-weight:700;
+    margin:0
+}
+.steps p{
+    margin:0;
+    font-size:14px
+}
+.steps a{
+    margin-top:16px;
+    align-self:center
+}
+.blog h2{
+    text-align:left;
+    margin:0 auto 47px auto;
+    font-size:32px
+}
+.articles{
+    display:flex;
+    flex-direction:column;
+    gap:48px
+}
+.articles .article{
+    display:block
+}
+.article-image{
+    width:100%;
+    aspect-ratio:88/65;
+    object-fit:cover
+}
+.article-cat{
+    font-size:14px;
+    margin-top:16px
+}
+.bold{
+    font-weight:700
+}
+.article-title{
+    font-size:24px;
+    margin-bottom:0
+}
+.article-desc{
+    font-size:15px;
+    margin-bottom:16px
+}
+.article-data{
+    display:flex;
+    gap:16px;
+    align-items:center;
+    font-size:15px
+}
+.partners{
+    display:flex;
+    flex-direction:column;
+    gap:48px;
+    align-items:center
+}
+.partners-image{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover
+}
+.partners-text h2{
+    font-size:32px
+}
+.partners-desc{
+    margin:20px 0
+}
+.testimonials{
+    display:flex;
+    flex-direction:column;
+    gap:48px
+}
+.testimonial-header h2{
+    font-size:32px;
+    margin-bottom:12px
+}
+.testimonial-header p{
+    font-size:16px
+}
+.testimonial-content{
+    width:100%
+}
+.testimonials blockquote{
+    padding:32px;
+    border:1px solid #fe7f2d;
+    border-radius:20px;
+    margin-bottom:28px
+}
+.testimonial-rating{
+    margin-bottom:24px;
+    display:flex;
+    gap:4px
+}
+.fa-star{
+    color:#fe7f2d
+}
+.testimonial-quote{
+    margin-bottom:24px;
+    font-size:14px
+}
+.testimonial-slider{
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+.testimonial-dots{
+    font-size:8px;
+    display:flex;
+    gap:8px
+}
+.dot-full{
+    color:#fe7f2d
+}
+.dot-empty{
+    color:#121010;
+    opacity:.2
+}
+.testimonial-btns{
+    display:flex;
+    gap:16px;
+    font-size:24px
+}
+.testimonial-btn{
+    padding:5px 12px;
+    border:1px solid #fe7f2d;
+    border-radius:50%
+}
+.about{
+    background:#444;
+    color:#fff;
+    padding:94px 48px;
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    margin:0 25px 52px 25px
+}
+.about-text h2{
+    font-size:24px;
+    margin-bottom:24px
+}
+.about-text p{
+    font-size:16px;
+    margin-bottom:24px
+}
+.about-btn{
+    background-color:#fff;
+    color:#000;
+    height:fit-content;
+    padding:12px 24px
+}
+footer{
+    padding:0 45px 59px 45px
+}
+.footer-top{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:unset;
+    gap:48px;
+    margin-bottom:48px
+}
+.newsletter{
+    width:100%
+}
+.newsletter .logo-meeplin{
+    margin-bottom:20px
+}
+.newsletter-form{
+    margin:20px 0 12px 0;
+    flex-direction:column;
+    width:100%;
+    max-width:400px;
+    display:flex
 }
 .newsletter-form input{
-    margin: 0 0 16px 0;
-    width: 100%;
-    padding: 12px;
-    font-size: 17px;
-    border: 1px solid #FE7F2D;
+    margin:0 0 16px 0;
+    width:100%;
+    padding:12px;
+    font-size:17px;
+    border:1px solid #fe7f2d
 }
-.newsletter-form button {
-    width: 100%;
-    font-size: 17px;
-    padding: 12px 24px;
-    background-color: transparent;
+.newsletter-form button{
+    width:100%;
+    font-size:17px;
+    padding:12px 24px;
+    background-color:transparent
 }
-.privacy-policy {
-    font-size: 12px;
+.privacy-policy{
+    font-size:12px
 }
-.footer-lists {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 40px;
+.footer-lists{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    gap:40px
 }
-.meeplin, .customer-service, .social {
-    padding-right: 30px;
+.customer-service,.meeplin,.social{
+    padding-right:30px
 }
-.footer-lists h2 {
-    font-size: 16px;
-    margin-bottom: 16px;
+.footer-lists h2{
+    font-size:16px;
+    margin-bottom:16px
 }
-.footer-lists li {
-    padding: 8px 0;
+.footer-lists li{
+    padding:8px 0
 }
-.social-links a {
-    display: flex;
-    align-items: center;
+.social-links a{
+    display:flex;
+    align-items:center
 }
-.fa-facebook, .fa-instagram {
-    margin-right: 12px;
-    font-size: 20px;
+.fa-facebook,.fa-instagram{
+    margin-right:12px;
+    font-size:20px
 }
-.footer-bottom {
-    border-top: 1px solid #121010;
-    display: flex;
-    flex-direction: column-reverse;
-    padding-top: 24px;
-    gap: 32px;
-    font-size: 14px;
+.footer-bottom{
+    border-top:1px solid #121010;
+    display:flex;
+    flex-direction:column-reverse;
+    padding-top:24px;
+    gap:32px;
+    font-size:14px
 }
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:24px
 }
-.footer-links a {
-    text-decoration: underline;
+.footer-links a{
+    text-decoration:underline
 }
-
-@media (min-width: 1150px) {
-    .account-btn {
-        display: none;
-    }
-}
-
-/* === Modal Compte === */
-.account-modal {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 2000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-}
-.account-modal[aria-hidden="false"] {
-    opacity: 1;
-    pointer-events: auto;
-}
-.account-modal-backdrop {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.35);
-    z-index: 1;
-}
-.account-modal-content {
-    position: relative;
-    z-index: 2;
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-    padding: 36px 32px 32px 32px;
-    min-width: 260px;
-    max-width: 90vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: modalIn 0.3s cubic-bezier(0.4,0,0.2,1);
-}
-@keyframes modalIn {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-.account-modal-close {
-    position: absolute;
-    top: 12px;
-    right: 16px;
-    background: none;
-    border: none;
-    font-size: 28px;
-    color: #121010;
-    cursor: pointer;
-    z-index: 3;
-}
-.account-modal-close:hover {
-    color: #FE7F2D;
-}
-.account-modal-content h2 {
-    font-size: 22px;
-    margin-bottom: 28px;
-    color: #FE7F2D;
-}
-.account-modal-btns {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    width: 100%;
-}
-.account-modal-btns .btn-secondary,
-.account-modal-btns .btn-primary {
-    width: 100%;
-    font-size: 17px;
-    padding: 12px 0;
-    text-align: center;
-}
-
-/* Tablet (768px and up) */
-@media (min-width: 768px) {
-    section {
-        padding: 0 48px;
-        margin-bottom: 72px;
-    }
-    header {
-        padding: 71px 48px 103px 48px;
-        font-size: 14px;
-    }
-    .nav-links {
-        gap: 20px;
-    }
-    .btns-container {
-        gap: 16px;
-    }
-    .hero {
-        gap: 60px;
-    }
-    .hero-text h2 {
-        font-size: 36px;
-    }
-    .hero-desc {
-        font-size: 16px;
-    }
-    .hero-btns {
-        margin-top: 16px;
-    }
-    .how-it-works h2 {
-        width: 100%;
-        text-align: center;
-        font-size: 36px;
-        margin: 0 0 27px 0;
-    }
-    .steps {
-        gap: 32px;
-    }
-    .steps li {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-    .blog h2 {
-        font-size: 36px;
-    }
-    .partners-text h2 {
-        font-size: 36px;
-    }
-    .testimonial-header h2 {
-        font-size: 36px;
-    }
-    .testimonial-header p {
-        font-size: 16px;
-    }
-    .testimonial-quote {
-        font-size: 14px;
-    }
-    .about {
-        padding: 54px 48px;
-    }
-    .about-text h2 {
-        font-size: 28px;
-    }
-    .about-text p {
-        font-size: 16px;
-    }
-    .about-btn {
-        font-size: 14px;
-    }
-    .newsletter-phrase {
-        font-size: 14px;
-    }
-    .newsletter-form input {
-        font-size: 16px;
-    }
-    .newsletter-form button {
-        font-size: 16px;
-    }
-    .privacy-policy {
-        font-size: 11px;
-    }
-    footer {
-        padding: 0 48px 59px 48px;
-    }
-    .newsletter-form input {
-        font-size: 16px;
-    }
-    .newsletter-form button {
-        font-size: 16px;
-    }
-    .footer-lists h2 {
-        font-size: 14px;
-    }
-    .footer-lists li {
-        font-size: 14px;
-        padding: 4px 0;
-    }
-    .fa-facebook, .fa-instagram {
-        font-size: 18px;
-    }
-    .footer-bottom {
-        font-size: 12px;
+@media (min-width:1150px){
+    .account-btn{
+        display:none
     }
 }
-
-/* Desktop (1024px and up) */
-@media (min-width: 1150px) {
-    .top-links {
-        display: flex;
-        gap: 39px;
+.account-modal{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:2000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .3s
+}
+.account-modal[aria-hidden=false]{
+    opacity:1;
+    pointer-events:auto
+}
+.account-modal-backdrop{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,.35);
+    z-index:1
+}
+.account-modal-content{
+    position:relative;
+    z-index:2;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 8px 32px rgba(0,0,0,.18);
+    padding:36px 32px 32px 32px;
+    min-width:260px;
+    max-width:90vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    animation:modalIn .3s cubic-bezier(.4,0,.2,1)
+}
+@keyframes modalIn{
+    from{
+        transform:scale(.95);
+        opacity:0
     }
-    section {
-        padding: 0 96px;
-        margin-bottom: 112px;
+    to{
+        transform:scale(1);
+        opacity:1
     }
-    header {
-        padding: 71px 96px 103px 79px;
+}
+.account-modal-close{
+    position:absolute;
+    top:12px;
+    right:16px;
+    background:0 0;
+    border:none;
+    font-size:28px;
+    color:#121010;
+    cursor:pointer;
+    z-index:3
+}
+.account-modal-close:hover{
+    color:#fe7f2d
+}
+.account-modal-content h2{
+    font-size:22px;
+    margin-bottom:28px;
+    color:#fe7f2d
+}
+.account-modal-btns{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    width:100%
+}
+.account-modal-btns .btn-primary,.account-modal-btns .btn-secondary{
+    width:100%;
+    font-size:17px;
+    padding:12px 0;
+    text-align:center
+}
+@media (min-width:768px){
+    section{
+        padding:0 48px;
+        margin-bottom:72px
     }
-    .burger {
-        display: none;
+    header{
+        padding:71px 48px 103px 48px;
+        font-size:14px
     }
-    .hero {
-        flex-direction: row;
-        align-items: center;
-        gap: 120px;
+    .nav-links{
+        gap:20px
     }
-    .hero-desc {
-        font-size: 18px;
-        text-align: left;
+    .btns-container{
+        gap:16px
     }
-    .hero-text h2 {
-        font-size: 48px;
-        text-align: left;
+    .hero{
+        gap:60px
     }
-    .hero-btns {
-        margin-top: 20px;
-        justify-content: flex-start;
+    .hero-text h2{
+        font-size:36px
     }
-    .hero-image {
-        width: 49%;
+    .hero-desc{
+        font-size:16px
     }
-    .how-it-works h2 {
-        width: 824px;
-        text-align: center;
-        font-size: 40px;
-        margin: 0 auto 56px auto;
+    .hero-btns{
+        margin-top:16px
     }
-    .steps {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        text-align: center;
-        column-gap: 48px;
-        row-gap: 24px;
-        justify-items: center;
-        align-items: start;
+    .how-it-works h2{
+        width:100%;
+        text-align:center;
+        font-size:36px;
+        margin:0 0 27px 0
     }
-    .steps li {
-        display: contents;
+    .steps{
+        gap:32px
     }
-    .steps-icon {
-        grid-row: 1;
+    .steps li{
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        gap:16px
     }
-    .steps li h3 {
-        grid-row: 2;
-        align-self: center;
+    .blog h2{
+        font-size:36px
     }
-    .steps p {
-        grid-row: 3;
-        font-size: 16px;
+    .partners-text h2{
+        font-size:36px
     }
-    .steps a {
-        grid-row: 4;
-        align-self: end;
+    .testimonial-header h2{
+        font-size:36px
     }
-    .blog h2 {
-        font-size: 40px;
+    .testimonial-header p{
+        font-size:16px
     }
-    .articles {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 24px;
-        row-gap: 8px;
+    .testimonial-quote{
+        font-size:14px
     }
-    .articles .article {
-        display: contents;
+    .about{
+        padding:54px 48px
     }
-    .article-image {
-        grid-row: 1;
-        aspect-ratio: 50/37;
+    .about-text h2{
+        font-size:28px
     }
-    .article-cat {
-        grid-row: 2;
+    .about-text p{
+        font-size:16px
     }
-    .article-title {
-        grid-row: 3;
+    .about-btn{
+        font-size:14px
     }
-    .article-desc {
-        grid-row: 4;
+    .newsletter-phrase{
+        font-size:14px
     }
-    .article-data {
-        grid-row: 5;
+    .newsletter-form input{
+        font-size:16px
     }
-    .partners {
-        flex-direction: row;
-        gap: 130px;
+    .newsletter-form button{
+        font-size:16px
     }
-    .partners-image {
-        width: 49%;
-        aspect-ratio: 204/151;
+    .privacy-policy{
+        font-size:11px
     }
-    .partners-text h2 {
-        font-size: 40px;
+    footer{
+        padding:0 48px 59px 48px
     }
-    .testimonials {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 0;
+    .newsletter-form input{
+        font-size:16px
     }
-    .testimonial-header h2 {
-        font-size: 40px;
-        margin-bottom: 0;
+    .newsletter-form button{
+        font-size:16px
     }
-    .testimonial-header p {
-        font-size: 18px;
+    .footer-lists h2{
+        font-size:14px
     }
-    .testimonial-content {
-        width: 47%;
+    .footer-lists li{
+        font-size:14px;
+        padding:4px 0
     }
-    .testimonial-quote {
-        font-size: 16px;
+    .fa-facebook,.fa-instagram{
+        font-size:18px
     }
-    .about {
-        margin: 0 96px 112px 96px;
-        padding: 54px 106px;
-        flex-direction: row;
-        text-align: left;
+    .footer-bottom{
+        font-size:12px
     }
-    .about-text h2 {
-        font-size: 33px;
-        margin-bottom: 0;
+}
+@media (min-width:1150px){
+    .top-links{
+        display:flex;
+        gap:39px
     }
-    .about-text p {
-        font-size: 20px;
-        margin-bottom: 0;
+    section{
+        padding:0 96px;
+        margin-bottom:112px
     }
-    footer {
-        padding: 0 94px 63px 80px;
+    header{
+        padding:71px 96px 103px 79px
     }
-    .footer-top {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 0;
-        margin-bottom: 76px;
+    .burger{
+        display:none
     }
-    .newsletter {
-        width: 41%;
+    .hero{
+        flex-direction:row;
+        align-items:center;
+        gap:120px
     }
-    .newsletter .logo-meeplin {
-        margin-bottom: 36px;
+    .hero-desc{
+        font-size:18px;
+        text-align:left
     }
-    .newsletter-form {
-        margin: 24px 0 12px 0;
-        flex-direction: row;
-        width: 100%;
-        max-width: none;
+    .hero-text h2{
+        font-size:48px;
+        text-align:left
     }
-    .newsletter-form input {
-        margin: 0 16px 0 0;
-        width: auto;
-        flex-grow: 1;
+    .hero-btns{
+        margin-top:20px;
+        justify-content:flex-start
     }
-    .newsletter-form button {
-        width: auto;
+    .hero-image{
+        width:49%
     }
-    .footer-lists {
-        flex-direction: row;
-        width: auto;
+    .how-it-works h2{
+        width:824px;
+        text-align:center;
+        font-size:40px;
+        margin:0 auto 56px auto
     }
-    .footer-bottom {
-        flex-direction: row;
-        padding-top: 32px;
-        gap: 0;
+    .steps{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        text-align:center;
+        column-gap:48px;
+        row-gap:24px;
+        justify-items:center;
+        align-items:start
     }
-    .footer-links {
-        flex-direction: row;
+    .steps li{
+        display:contents
+    }
+    .steps-icon{
+        grid-row:1
+    }
+    .steps li h3{
+        grid-row:2;
+        align-self:center
+    }
+    .steps p{
+        grid-row:3;
+        font-size:16px
+    }
+    .steps a{
+        grid-row:4;
+        align-self:end
+    }
+    .blog h2{
+        font-size:40px
+    }
+    .articles{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        column-gap:24px;
+        row-gap:8px
+    }
+    .articles .article{
+        display:contents
+    }
+    .article-image{
+        grid-row:1;
+        aspect-ratio:50/37
+    }
+    .article-cat{
+        grid-row:2
+    }
+    .article-title{
+        grid-row:3
+    }
+    .article-desc{
+        grid-row:4
+    }
+    .article-data{
+        grid-row:5
+    }
+    .partners{
+        flex-direction:row;
+        gap:130px
+    }
+    .partners-image{
+        width:49%;
+        aspect-ratio:204/151
+    }
+    .partners-text h2{
+        font-size:40px
+    }
+    .testimonials{
+        flex-direction:row;
+        justify-content:space-between;
+        gap:0
+    }
+    .testimonial-header h2{
+        font-size:40px;
+        margin-bottom:0
+    }
+    .testimonial-header p{
+        font-size:18px
+    }
+    .testimonial-content{
+        width:47%
+    }
+    .testimonial-quote{
+        font-size:16px
+    }
+    .about{
+        margin:0 96px 112px 96px;
+        padding:54px 106px;
+        flex-direction:row;
+        text-align:left
+    }
+    .about-text h2{
+        font-size:33px;
+        margin-bottom:0
+    }
+    .about-text p{
+        font-size:20px;
+        margin-bottom:0
+    }
+    footer{
+        padding:0 94px 63px 80px
+    }
+    .footer-top{
+        flex-direction:row;
+        align-items:flex-start;
+        justify-content:space-between;
+        gap:0;
+        margin-bottom:76px
+    }
+    .newsletter{
+        width:41%
+    }
+    .newsletter .logo-meeplin{
+        margin-bottom:36px
+    }
+    .newsletter-form{
+        margin:24px 0 12px 0;
+        flex-direction:row;
+        width:100%;
+        max-width:none
+    }
+    .newsletter-form input{
+        margin:0 16px 0 0;
+        width:auto;
+        flex-grow:1
+    }
+    .newsletter-form button{
+        width:auto
+    }
+    .footer-lists{
+        flex-direction:row;
+        width:auto
+    }
+    .footer-bottom{
+        flex-direction:row;
+        padding-top:32px;
+        gap:0
+    }
+    .footer-links{
+        flex-direction:row
     }
 }
