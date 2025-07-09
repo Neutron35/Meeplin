@@ -9,36 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b9febf0bc5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/article.css" />
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>
-                <a href="index.html">
-                    <img class="logo-meeplin" alt="Logo Meeplin" src="assets/logo-meeplin.png">
-                </a>
-            </h1>
-            <div class="top-links">
-                <ul class="nav-links">
-                    <li><a href="#">Quiz</a></li>
-                    <li><a href="#">Catalogue de jeux</a></li>
-                    <li><a href="#">Boutiques partenaires</a></li>
-                    <li><a href="#">Communauté <i class="fa-solid fa-chevron-down"></i></a></li>
-                </ul>
-                <div class="btns-container">
-                    <a href="#" class="btn-secondary">Se connecter</a>
-                    <a href="#" class="btn-primary">S'inscrire</a>
-                </div>
-            </div>
-            <button class="burger" aria-label="Menu">
-                <i class="fa-solid fa-bars menu-icon"></i>
-            </button>
-        </nav>
-        
-        <!-- Menu mobile -->
-        <div class="mobile-menu">
+<header>
+    <nav>
+        <h1>
+            <a href="index.html">
+                <img class="logo-meeplin" alt="Logo Meeplin" src="assets/logo-meeplin.png">
+            </a>
+        </h1>
+        <div class="top-links">
             <ul class="nav-links">
                 <li><a href="#">Quiz</a></li>
                 <li><a href="#">Catalogue de jeux</a></li>
@@ -50,18 +32,125 @@
                 <a href="#" class="btn-primary">S'inscrire</a>
             </div>
         </div>
-    </header>
+        <div class="mobile-header">
+            <!-- Bouton Compte (mobile uniquement) -->
+            <button class="account-btn" aria-label="Compte">
+                <i class="fa-solid fa-user"></i>
+            </button>
+            <button class="burger" aria-label="Menu">
+                <i class="fa-solid fa-bars menu-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu">
+        <ul class="nav-links">
+            <li><a href="#">Quiz</a></li>
+            <li><a href="#">Catalogue de jeux</a></li>
+            <li><a href="#">Boutiques partenaires</a></li>
+            <li><a href="#">Communauté <i class="fa-solid fa-chevron-down"></i></a></li>
+        </ul>
+        <!-- Les boutons de compte sont retirés du menu mobile -->
+    </div>
+</header>
+
+<!-- Modal Compte -->
+<div class="account-modal" id="accountModal" aria-hidden="true">
+    <div class="account-modal-backdrop"></div>
+    <div class="account-modal-content" role="dialog" aria-modal="true" aria-labelledby="accountModalTitle">
+        <button class="account-modal-close" aria-label="Fermer le menu compte">&times;</button>
+        <h2 id="accountModalTitle">Mon compte</h2>
+        <div class="account-modal-btns">
+            <a href="#" class="btn-secondary">Se connecter</a>
+            <a href="#" class="btn-primary">S'inscrire</a>
+        </div>
+    </div>
+</div>
 
     <!-- Contenu principal du blog -->
     <main>
-        <section class="blog-hero">
-            <img src="assets/article2.jpg" alt="Blog Hero Image" class="blog-hero-image">
-            <div class="blog-hero-content">
-                <h2>Les Aventuriers du Rail : <br>Construisez votre empire ferroviaire avec stratégie</h2>
-                <div class="blog-hero-data">
+        <section class="hero">
+            <img src="assets/article/hero.jpg" alt="Blog Hero Image" class="hero-image">
+            <div class="hero-content">
+                <h2>🎲 Les Aventuriers du Rail : <br>Construisez votre empire ferroviaire avec stratégie</h2>
+                <div class="hero-data">
                     <img src="assets/article-avatar.png" alt="Avatar" class="avatar">
-                    <div><span class="bold">Nom</span><br/> 2 juillet 2025 • 5 minutes</div>
+                    <div><span class="bold">Meeplin Team</span><br/> 2 juillet 2025 • 5 minutes</div>
                 </div>
+            </div>
+        </section>
+        <section class="post-content">
+            <div class="post-header">
+                <div class="post-ariane">
+                    <p>Blog <i class="fa-solid fa-chevron-right"></i> Jeu de stratégie</p>
+                </div>
+                <div class="post-socials">
+                    <i class="fa-solid fa-link"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+            </div>
+            <div class="post-article">
+                <h2>Un empire ferroviaire à portée de main !</h2>
+                <p>Avec plus de 10 millions d’exemplaires vendus dans le monde, Les Aventuriers du Rail (ou Ticket to Ride en version originale) s’est imposé comme un incontournable des jeux de société modernes.</p>
+                <p>Accessible, élégant et pourtant d’une richesse tactique surprenante, il séduit les familles comme les stratèges les plus avertis. Mais derrière ses wagons colorés et ses cartes aux allures vintage se cache une véritable bataille de réseau et d’opportunisme…</p>
+                <div>
+                    <img src="assets/article/rail.jpg" alt="Aventuriers du Rail" class="post-image">
+                    <p class="post-image-desc">Des joueurs réunis autour du plateau coloré des Aventuriers du Rail, en pleine partie stratégique pour relier les grandes villes d’Europe.</p>
+                </div>
+                <h3>🧠 Un jeu simple aux mécaniques affûtées</h3>
+                <p>Le principe est limpide : chaque joueur doit relier différentes villes à l’aide de cartes wagons de couleur, tout en remplissant des objectifs secrets appelés "billets de destination". Mais le timing, la lecture du plateau et la capacité à bloquer ses adversaires transforment une partie de Ticket to Ride en duel d’anticipation permanent.</p>
+                <p class="post-tip">💡 Astuce Meeplin : Ne négligez jamais les petites routes grises – elles sont souvent les clefs d’un contournement malin en fin de partie.</p>
+                <h2>Notre conclusion !</h2>
+                <ul>Selon les extensions (Europe, USA, Asie...), les stratégies varient légèrement, mais voici quelques conseils généraux :
+                    <li>Contrôlez le centre : Les grandes liaisons centrales sont convoitées. Les sécuriser tôt est souvent payant.</li>
+                    <li>Maximisez vos trajets : Choisissez des objectifs compatibles entre eux pour former un grand réseau continu.</li>
+                    <li>Faites diversion : Construire une route anodine peut détourner l’attention… et ouvrir des options de blocage.</li>
+                </ul>
+                <div class="post-tags">
+                    <div>Stratégie</div>
+                    <div>Les Aventuriers du Rail</div>
+                </div>
+            </div>
+        </section>
+        <section class="blog">
+            <h2>Nos derniers articles</h2>
+            <p class="blog-desc">Retrouvez-ici nos articles de blog les plus récents</p>
+            <div class="articles">
+                <a href="#" class="article">
+                    <img src="assets/article1.jpg" alt="Article 1" class="article-image">
+                    <p class="article-cat">Jeu de stratégie</p>
+                    <h3 class="article-title">Kraken Quest</h3>
+                    <p class="article-desc">Un jeu de cartes et d'aventure sur les mers, entre trésors, bluff et coups de canon.</p>
+                    <div class="article-data">
+                        <img src="assets/article-avatar.png" alt="Avatar" class="avatar">
+                        <div><span class="bold">Meeplin Team</span><br/> 4 juillet 2025 • 3 minutes</div>
+                    </div>
+                </a>
+                <a href="article.html" class="article">
+                    <img src="assets/article/clan-clash.jpg" alt="Article 2" class="article-image">
+                    <p class="article-cat">Jeu de cartes</p>
+                    <h3 class="article-title">Clan Clash</h3>
+                    <p class="article-desc">Un jeu de cartes façon 7 familles, mais stratégique, drôle et plein de rebondissements.</p>
+                    <div class="article-data">
+                        <img src="assets/article-avatar.png" alt="Avatar" class="avatar">
+                        <div><span class="bold">Nom</span><br/> 2 juillet 2025 • 5 minutes</div>
+                    </div>
+                </a>
+                <a href="#" class="article">
+                    <img src="assets/article3.jpg" alt="Article 3" class="article-image">
+                    <p class="article-cat">Jeu de rôle</p>
+                    <h3 class="article-title">Chroniques de Valmur</h3>
+                    <p class="article-desc">Lancez vos dés, créez votre héros et embarquez dans une aventure pleine de surprises.</p>
+                    <div class="article-data">
+                        <img src="assets/article-avatar.png" alt="Avatar" class="avatar">
+                        <div><span class="bold">Meeplin Team</span><br/> 30 juin 2025 • 4 minutes</div>
+                    </div>
+                </a>
+            </div>
+            <div class="blog-btn">
+                <a href="#" class="btn-secondary">Tout voir</a>
             </div>
         </section>
 

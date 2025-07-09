@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b9febf0bc5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/index.css" />
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -33,9 +33,15 @@
                     <a href="#" class="btn-primary">S'inscrire</a>
                 </div>
             </div>
-            <button class="burger" aria-label="Menu">
-                <i class="fa-solid fa-bars menu-icon"></i>
-            </button>
+            <div class="mobile-header">
+                <!-- Bouton Compte (mobile uniquement) -->
+                <button class="account-btn" aria-label="Compte">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+                <button class="burger" aria-label="Menu">
+                    <i class="fa-solid fa-bars menu-icon"></i>
+                </button>
+            </div>
         </nav>
         
         <!-- Menu mobile -->
@@ -46,12 +52,22 @@
                 <li><a href="#">Boutiques partenaires</a></li>
                 <li><a href="#">Communauté <i class="fa-solid fa-chevron-down"></i></a></li>
             </ul>
-            <div class="btns-container">
+            <!-- Les boutons de compte sont retirés du menu mobile -->
+        </div>
+    </header>
+
+    <!-- Modal Compte -->
+    <div class="account-modal" id="accountModal" aria-hidden="true">
+        <div class="account-modal-backdrop"></div>
+        <div class="account-modal-content" role="dialog" aria-modal="true" aria-labelledby="accountModalTitle">
+            <button class="account-modal-close" aria-label="Fermer le menu compte">&times;</button>
+            <h2 id="accountModalTitle">Mon compte</h2>
+            <div class="account-modal-btns">
                 <a href="#" class="btn-secondary">Se connecter</a>
                 <a href="#" class="btn-primary">S'inscrire</a>
             </div>
         </div>
-    </header>
+    </div>
 
     <section class="hero">
         <div class="hero-text">

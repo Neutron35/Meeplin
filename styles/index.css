@@ -84,18 +84,22 @@ nav {
 .btn-secondary:hover {
     background-color: #F5E9E2;
 }
+.mobile-header {
+    display: flex;
+    gap: 10px;
+}
 .burger {
     display: block;
     background: none;
     border: none;
     font-size: 24px;
-    color: #121010;
+    color: #FE7F2D;
     cursor: pointer;
     z-index: 1001;
     transition: color 0.3s ease;
 }
 .burger:hover {
-    color: #FE7F2D;
+    color: #7F4017;
 }
 
 /* Menu mobile */
@@ -187,6 +191,20 @@ nav {
     transform: rotate(90deg);
 }
 
+/* === Compte (mobile) === */
+.account-btn {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #FE7F2D;
+    cursor: pointer;
+}
+.account-btn:focus,
+.account-btn:hover {
+    color: #7F4017;
+}
+
 /** Hero **/
 .hero {
     text-align: center;
@@ -205,11 +223,11 @@ nav {
 .hero-desc {
     margin-top: 21px;
     font-size: 14px;
-    text-align: center;
+    text-align: left;
 }
 .hero-btns {
     margin-top: 19px;
-    justify-content: center;
+    justify-content: left;
 }
 .hero-image {
     width: 100%;
@@ -220,7 +238,7 @@ nav {
 /** How It Works **/
 .how-it-works h2 {
     width: 100%;
-    text-align: center;
+    text-align: left;
     font-size: 32px;
     margin: 0 0 27px 0;
 }
@@ -260,7 +278,7 @@ nav {
 
 /** Last Blog Posts **/
 .blog h2 {
-    text-align: center;
+    text-align: left;
     margin: 0 auto 47px auto;
     font-size: 32px;
 }
@@ -325,7 +343,6 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 48px;
-    align-items: center;
 }
 .testimonial-header h2 {
     font-size: 32px;
@@ -492,26 +509,83 @@ footer {
     text-decoration: underline;
 }
 
+@media (min-width: 1150px) {
+    .account-btn {
+        display: none;
+    }
+}
 
-/** PAGE ARTICLE **/
-.blog-hero {
-    padding: 0 25px;
-    width: 100%;
-    position: relative;
-    text-align: center;
+/* === Modal Compte === */
+.account-modal {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
 }
-.blog-hero-image {
-    width: 100%;
-    aspect-ratio: 176/247;
-    object-fit: cover;
-    filter: brightness(0.5);
+.account-modal[aria-hidden="false"] {
+    opacity: 1;
+    pointer-events: auto;
 }
-.blog-hero-content {
+.account-modal-backdrop {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 1;
+}
+.account-modal-content {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    padding: 36px 32px 32px 32px;
+    min-width: 260px;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: modalIn 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes modalIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.account-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #121010;
+    cursor: pointer;
+    z-index: 3;
+}
+.account-modal-close:hover {
+    color: #FE7F2D;
+}
+.account-modal-content h2 {
+    font-size: 22px;
+    margin-bottom: 28px;
+    color: #FE7F2D;
+}
+.account-modal-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+}
+.account-modal-btns .btn-secondary,
+.account-modal-btns .btn-primary {
+    width: 100%;
+    font-size: 17px;
+    padding: 12px 0;
+    text-align: center;
 }
 
 /* Tablet (768px and up) */

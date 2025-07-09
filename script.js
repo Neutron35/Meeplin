@@ -36,4 +36,29 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = '';
         }
     });
+
+    // === Modal Compte ===
+    const accountBtn = document.querySelector('.account-btn');
+    const accountModal = document.getElementById('accountModal');
+    const accountModalClose = document.querySelector('.account-modal-close');
+    const accountModalBackdrop = document.querySelector('.account-modal-backdrop');
+
+    function openAccountModal() {
+        accountModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeAccountModal() {
+        accountModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    accountBtn.addEventListener('click', openAccountModal);
+    accountModalClose.addEventListener('click', closeAccountModal);
+    accountModalBackdrop.addEventListener('click', closeAccountModal);
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && accountModal.getAttribute('aria-hidden') === 'false') {
+            closeAccountModal();
+        }
+    });
 }); 
