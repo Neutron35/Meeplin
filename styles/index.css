@@ -1,179 +1,209 @@
 * {
-    box-sizing:border-box;
-    margin:0;
-    padding:0
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+/** Styles **/
 body {
-    font-family:Poppins,sans-serif;
-    color:#121010;
-    background-color:white;
-    max-width:1440px;
-    margin:0 auto;
-    font-size:16px
+    font-family: Poppins, sans-serif;
+    color: #121010;
+    background-color: white;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-size: 16px;
 }
 a {
-    text-decoration:none;
-    color:#121010
+    text-decoration: none;
+    color: #121010;
 }
 ul {
-    list-style:none;
-    padding:0;
-    margin:0
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 section {
-    padding:0 25px;
-    margin-bottom:72px
+    padding: 0 25px;
+    margin-bottom: 72px;
 }
 .logo-meeplin {
-    width:115px;
-    height:60px;
-    vertical-align:middle
+    width: 115px;
+    height: 60px;
+    vertical-align: middle;
 }
 .fa-chevron-right {
-    margin-left:8px
+    margin-left: 8px;
 }
 .avatar {
-    width:48px;
-    height:48px
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
 }
+
+/** Header **/
 header {
-    padding:71px 25px 103px 8px;
-    position:relative
+    padding: 69px 25px 46px 8px;
+    position: relative;
 }
 nav {
-    display:flex;
-    justify-content:space-between;
-    align-items:center
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .top-links {
-    display:none
+    display: none;
 }
 .nav-links {
-    list-style:none;
-    display:flex;
-    gap:43px;
-    align-items:center
+    list-style: none;
+    display: flex;
+    gap: 43px;
+    align-items: center;
 }
 .btns-container {
-    display:flex;
-    gap:23px;
-    align-items:center;
-    font-size:15px
+    display: flex;
+    gap: 23px;
+    align-items: center;
+    font-size: 15px;
 }
 .btn-primary {
-    background-color:#fe7f2d;
-    color:#fff;
-    padding:8px 20px;
-    border:#fe7f2d 1px solid;
-    border-radius:40px
+    background-color: #FE7F2D;
+    color: white;
+    padding: 8px 20px;
+    border: #FE7F2D 1px solid;
+    border-radius: 40px;
 }
 .btn-primary:hover {
-    background-color:#7f4017;
-    border:#7f4017 1px solid
+    background-color: #7F4017;
+    border: #7F4017 1px solid;
 }
 .btn-secondary {
-    padding:8px 20px;
-    border:#fe7f2d 1px solid;
-    border-radius:40px;
-    background-color:#fff
+    padding: 8px 20px;
+    border: #FE7F2D 1px solid;
+    border-radius: 40px;
+    background-color: white;
 }
 .btn-secondary:hover {
-    background-color:#f5e9e2
+    background-color: #F5E9E2;
 }
 .mobile-header {
-    display:flex;
-    gap:10px
+    display: flex;
+    gap: 10px;
 }
 .burger {
-    display:block;
-    background:0 0;
-    border:none;
-    font-size:24px;
-    color:#fe7f2d;
-    cursor:pointer;
-    z-index:1001;
-    transition:color .3s ease
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #FE7F2D;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.3s ease;
 }
 .burger:hover {
-    color:#7f4017
+    color: #7F4017;
 }
+
+/* Menu mobile */
 .mobile-menu {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    background-color:rgba(245,233,226,.98);
-    backdrop-filter:blur(10px);
-    z-index:1000;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    opacity:0;
-    visibility:hidden;
-    transition:all .4s cubic-bezier(.4,0,.2,1)
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(245, 233, 226, 0.98);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
 .mobile-menu .nav-links {
-    flex-direction:column;
-    gap:32px;
-    margin-bottom:48px;
-    text-align:center
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 48px;
+    text-align: center;
 }
+
 .mobile-menu .nav-links li {
-    opacity:0;
-    transform:translateY(20px);
-    transition:all .4s ease;
-    transition-delay:.1s
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    transition-delay: 0.1s;
 }
-.mobile-menu .nav-links li:nth-child(1) {
-    transition-delay:.1s
+
+.mobile-menu.active .nav-links li {
+    opacity: 1;
+    transform: translateY(0);
 }
-.mobile-menu .nav-links li:nth-child(2) {
-    transition-delay:.2s
-}
-.mobile-menu .nav-links li:nth-child(3) {
-    transition-delay:.3s
-}
-.mobile-menu .nav-links li:nth-child(4) {
-    transition-delay:.4s
-}
+
+.mobile-menu .nav-links li:nth-child(1) { transition-delay: 0.1s; }
+.mobile-menu .nav-links li:nth-child(2) { transition-delay: 0.2s; }
+.mobile-menu .nav-links li:nth-child(3) { transition-delay: 0.3s; }
+.mobile-menu .nav-links li:nth-child(4) { transition-delay: 0.4s; }
+
 .mobile-menu .nav-links a {
-    font-size:24px;
-    font-weight:500;
-    color:#121010;
-    transition:color .3s ease
+    font-size: 24px;
+    font-weight: 500;
+    color: #121010;
+    transition: color 0.3s ease;
 }
+
 .mobile-menu .nav-links a:hover {
-    color:#fe7f2d
+    color: #FE7F2D;
 }
+
 .mobile-menu .btns-container {
-    flex-direction:column;
-    gap:16px;
-    opacity:0;
-    transform:translateY(20px);
-    transition:all .4s ease;
-    transition-delay:.5s
+    flex-direction: column;
+    gap: 16px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    transition-delay: 0.5s;
 }
+
+.mobile-menu.active .btns-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .mobile-menu .btns-container a {
-    font-size:18px;
-    padding:12px 32px;
-    min-width:200px;
-    text-align:center
+    font-size: 18px;
+    padding: 12px 32px;
+    min-width: 200px;
+    text-align: center;
 }
+
+/* Animation du burger */
 .burger .menu-icon {
-    transition:transform .3s ease
+    transition: transform 0.3s ease;
 }
+
+.burger.active .menu-icon {
+    transform: rotate(90deg);
+}
+
+/* === Compte (mobile) === */
 .account-btn {
-    display:block;
-    background:0 0;
-    border:none;
-    font-size:24px;
-    color:#fe7f2d;
-    cursor:pointer
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #FE7F2D;
+    cursor: pointer;
 }
-.account-btn:focus,.account-btn:hover {
-    color:#7f4017
+.account-btn:focus,
+.account-btn:hover {
+    color: #7F4017;
 }
 .hero {
     text-align:center;
@@ -354,29 +384,6 @@ nav {
     padding:5px 12px;
     border:1px solid #fe7f2d;
     border-radius:50%
-}
-.about {
-    background:#444;
-    color:#fff;
-    padding:94px 48px;
-    display:flex;
-    flex-direction:column;
-    text-align:center;
-    margin:0 25px 52px 25px
-}
-.about-text h2 {
-    font-size:24px;
-    margin-bottom:24px
-}
-.about-text p {
-    font-size:16px;
-    margin-bottom:24px
-}
-.about-btn {
-    background-color:#fff;
-    color:#000;
-    height:fit-content;
-    padding:12px 24px
 }
 footer {
     padding:0 45px 59px 45px
@@ -661,6 +668,9 @@ footer {
     header {
         padding:71px 96px 103px 79px
     }
+    .mobile-header {
+        display:none
+    }
     .burger {
         display:none
     }
@@ -759,6 +769,7 @@ footer {
     .testimonials {
         flex-direction:row;
         justify-content:space-between;
+        align-items:center;
         gap:0
     }
     .testimonial-header h2 {
@@ -799,7 +810,7 @@ footer {
         margin-bottom:76px
     }
     .newsletter {
-        width:41%
+        width:40%
     }
     .newsletter .logo-meeplin {
         margin-bottom:36px

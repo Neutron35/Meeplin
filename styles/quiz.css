@@ -23,7 +23,6 @@ ul {
     margin: 0;
 }
 section {
-    padding: 0 25px;
     margin-bottom: 72px;
 }
 .logo-meeplin {
@@ -205,141 +204,42 @@ nav {
 .account-btn:hover {
     color: #7F4017;
 }
-.hero {
-    width:100%;
-    position:relative;
-    text-align:center
+.catch {
+    padding: 0 25px;
+    font-size: 30px;
+    margin-bottom: 42px;
 }
-.hero-image {
-    width:100%;
-    aspect-ratio:176/247;
-    object-fit:cover;
-    filter:brightness(.5)
+.quiz-header {
+    padding: 42px 0;
+    text-align: center;
+    background-color: #F5E9E2;
+    font-size: 20px;
 }
-.hero-content {
-    position:absolute;
-    padding:0 45px 0 45px;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    color:#fff;
-    width:100%
+.question {
+    margin-top: 52px;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
 }
-.hero-content h2 {
-    font-size:32px;
-    margin-bottom:32px
+.question h3 {
+    padding: 0 30px;
+    text-align: center;
 }
-.hero-data div {
-    margin-top:16px
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 92px;
 }
-.post-header {
-    display:flex;
-    justify-content:space-between
+.quiz-option {
+    padding: 17px;
+    border-radius: 20px;
 }
-.post-ariane {
-    display:none
-}
-.post-ariane .fa-chevron-right {
-    margin:0 8px
-}
-.post-socials {
-    display:flex;
-    gap:12px
-}
-.post-socials .fa-facebook,.post-socials .fa-instagram,.post-socials .fa-link {
-    margin:0;
-    font-size:24px
-}
-.post-article {
-    margin-top:32px;
-    display:flex;
-    flex-direction:column;
-    gap:16px
-}
-.post-article h2 {
-    font-size:33px;
-    margin-bottom:8px
-}
-.post-image {
-    width:100%;
-    aspect-ratio:88/43;
-    object-fit:cover;
-    margin-top:40px
-}
-.post-image-desc {
-    font-size:15px;
-    border-left:2px solid #121010;
-    padding-left:8px;
-    margin-bottom:40px
-}
-.post-tip {
-    margin:52px 0 36px 0;
-    font-style:italic
-}
-.post-article ul {
-    list-style:disc
-}
-.post-article ul li {
-    margin-left:25px
-}
-.post-tags {
-    margin-top:32px;
-    display:flex;
-    justify-content:center
-}
-.post-tags div {
-    background-color:#fe7f2d;
-    color:#fff;
-    padding:8px 16px;
-    font-size:14px;
-    margin-right:12px
-}
-.blog h2 {
-    text-align:center;
-    margin:0 auto 13px auto;
-    font-size:32px
-}
-.blog-desc {
-    margin-bottom:48px
-}
-.articles {
-    display:flex;
-    flex-direction:column;
-    gap:48px
-}
-.articles .article {
-    display:block
-}
-.article-image {
-    width:100%;
-    aspect-ratio:88/65;
-    object-fit:cover
-}
-.article-cat {
-    font-size:14px;
-    margin-top:16px
-}
-.bold {
-    font-weight:700
-}
-.article-title {
-    font-size:24px;
-    margin-bottom:0
-}
-.article-desc {
-    font-size:15px;
-    margin-bottom:16px
-}
-.article-data {
-    display:flex;
-    gap:16px;
-    align-items:center;
-    font-size:15px
-}
-.blog-btn {
-    margin-top:22px;
-    display:flex;
-    justify-content:center
+.quiz-next {
+    width: fit-content;
+    border-radius: 20px;
 }
 footer {
     padding:0 45px 59px 45px
@@ -510,7 +410,6 @@ footer {
 }
 @media (min-width:768px) {
     section {
-        padding:0 48px;
         margin-bottom:72px
     }
     header {
@@ -523,17 +422,9 @@ footer {
     .btns-container {
         gap:16px
     }
-    .hero {
-        gap:60px
-    }
-    .hero-desc {
-        font-size:16px
-    }
-    .hero-btns {
-        margin-top:16px
-    }
-    .blog h2 {
-        font-size:36px
+    .catch {
+        padding: 0 130px;
+        text-align: center;
     }
     .newsletter-phrase {
         font-size:14px
@@ -576,7 +467,6 @@ footer {
         gap:39px
     }
     section {
-        padding:0 96px;
         margin-bottom:112px
     }
     header {
@@ -588,65 +478,17 @@ footer {
     .burger {
         display:none
     }
-    .hero {
-        flex-direction:row;
-        align-items:center;
-        gap:120px;
-        padding:0
+    .catch {
+        padding: 0 202px;
+        text-align: center;
+        font-size: 40px;
     }
-    .hero-desc {
-        font-size:18px;
-        text-align:left
+    .question h3 {
+        font-size: 24px;
     }
-    .hero-btns {
-        margin-top:20px;
-        justify-content:flex-start
-    }
-    .hero-image {
-        width:100%;
-        aspect-ratio:288/103
-    }
-    .hero-content {
-        width:60%
-    }
-    .post-content {
-        width:60%;
-        margin-left:auto;
-        margin-right:auto
-    }
-    .post-ariane {
-        display:block
-    }
-    .blog-btn {
-        margin-top:82px
-    }
-    .blog h2 {
-        font-size:40px
-    }
-    .articles {
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        column-gap:24px;
-        row-gap:8px
-    }
-    .articles .article {
-        display:contents
-    }
-    .article-image {
-        grid-row:1;
-        aspect-ratio:50/37
-    }
-    .article-cat {
-        grid-row:2
-    }
-    .article-title {
-        grid-row:3
-    }
-    .article-desc {
-        grid-row:4
-    }
-    .article-data {
-        grid-row:5
+    .quiz-options {
+        padding: 0;
+        width: 30%;
     }
     footer {
         padding:0 94px 63px 80px

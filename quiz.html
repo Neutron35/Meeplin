@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meeplin - Quiz</title>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b9febf0bc5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/quiz.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <nav>
+        <h1>
+            <a href="index.html">
+                <img class="logo-meeplin" alt="Logo Meeplin" src="assets/logo-meeplin.png">
+            </a>
+        </h1>
+        <div class="top-links">
+            <ul class="nav-links">
+                <li><a href="#">Quiz</a></li>
+                <li><a href="#">Catalogue de jeux</a></li>
+                <li><a href="#">Boutiques partenaires</a></li>
+                <li><a href="#">Communauté <i class="fa-solid fa-chevron-down"></i></a></li>
+            </ul>
+            <div class="btns-container">
+                <a href="#" class="btn-secondary">Se connecter</a>
+                <a href="#" class="btn-primary">S'inscrire</a>
+            </div>
+        </div>
+        <div class="mobile-header">
+            <button class="account-btn" aria-label="Compte">
+                <i class="fa-solid fa-user"></i>
+            </button>
+            <button class="burger" aria-label="Menu">
+                <i class="fa-solid fa-bars menu-icon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <ul class="nav-links">
+            <li><a href="#">Quiz</a></li>
+            <li><a href="#">Catalogue de jeux</a></li>
+            <li><a href="#">Boutiques partenaires</a></li>
+            <li><a href="#">Communauté <i class="fa-solid fa-chevron-down"></i></a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="account-modal" id="accountModal" aria-hidden="true">
+    <div class="account-modal-backdrop"></div>
+    <div class="account-modal-content" role="dialog" aria-modal="true" aria-labelledby="accountModalTitle">
+        <button class="account-modal-close" aria-label="Fermer le menu compte">&times;</button>
+        <h2 id="accountModalTitle">Mon compte</h2>
+        <div class="account-modal-btns">
+            <a href="#" class="btn-secondary">Se connecter</a>
+            <a href="#" class="btn-primary">S'inscrire</a>
+        </div>
+    </div>
+</div>
+
+<main>
+    <h2 class="catch">Répondez à quelques questions pour découvrir votre prochain coup de coeur ludique !</h2>
+    <section class="question-1" id="question-1">
+        <div class="quiz-header">
+            <p>Question 1/8</p>
+        </div>
+        <div class="question">
+            <h3>Combien de personnes joueront avec toi le plus souvent ?</h3>
+            <div class="quiz-options">
+                <button class="quiz-option btn-secondary">En solo</button>
+                <button class="quiz-option btn-secondary">De 2 à 4 personnes</button>
+                <button class="quiz-option btn-secondary">5 joueurs ou plus</button>
+            </div>
+            <button class="quiz-next btn-primary">Question suivante</button>
+        </div>
+    </section>
+    <section class="question-2" id="question-2" style="display: none;">
+        <div class="quiz-header">
+            <p>Question 2/8</p>
+        </div>
+        <div class="question">
+            <h3>Combien de temps souhaites-tu consacrer à une partie ?</h3>
+            <div class="quiz-options">
+                <button class="quiz-option btn-secondary">Moins de 30 minutes (rapide et efficace)</button>
+                <button class="quiz-option btn-secondary">30 à 60 minutes (équilibré)</button>
+                <button class="quiz-option btn-secondary">Plus d'1 heure (immersion totale)</button>
+            </div>
+            <button class="quiz-next btn-primary">Question suivante</button>
+        </div>
+    </section>
+    <section class="question-3" id="question-3" style="display: none;">
+        <div class="quiz-header">
+            <p>Question 3/8</p>
+        </div>
+        <div class="question">
+            <h3>Quelle ambiance préfères-tu autour de la table ?</h3>
+            <div class="quiz-options">
+                <button class="quiz-option btn-secondary">Fun et rire garanti</button>
+                <button class="quiz-option btn-secondary">Concentrée et stratégique</button>
+                <button class="quiz-option btn-secondary">Narratif et immersif</button>
+            </div>
+            <button class="quiz-next btn-primary">Question suivante</button>
+        </div>
+    </section>
+    <section class="question-4" id="question-4" style="display: none;">
+        <div class="quiz-header">
+            <p>Question 4/8</p>
+        </div>
+        <div class="question">
+            <h3>Tu es plutôt...</h3>
+            <div class="quiz-options">
+                <button class="quiz-option btn-secondary">Compétitif.ve (j'aime gagner !)</button>
+                <button class="quiz-option btn-secondary">Coopératif.ve (gagner ensemble)</button>
+                <button class="quiz-option btn-secondary">Peu importe tant qu'on s'amuse</button>
+            </div>
+            <button class="quiz-next btn-primary">Question suivante</button>
+        </div>
+    </section>
+    <section class="question-5" id="question-5" style="display: none;">
+        <div class="quiz-header">
+            <p>Question 5/8</p>
+        </div>
+        <div class="question">
+            <h3>Quels univers t'attirent le plus ?</h3>
+            <div class="quiz-options">
+                <button class="quiz-option btn-secondary">Fantastique, science-fiction, aventure</button>
+                <button class="quiz-option btn-secondary">Abstrait, logique, pur gameplay</button>
+                <button class="quiz-option btn-secondary">Réaliste, quotidien, thématique légère</button>
+            </div>
+            <button class="quiz-next btn-primary">Question suivante</button>
+        </div>
+    </section>
+    <section class="question-6" id="question-6" style="display: none;">
+        <div class="quiz-header">
+            <p>Question 6/8</p>
+        </div>
+        <div class="question">
+            <h3>Ton niveau de connaissance en jeux de société ?</h3>
+            <div class="quiz-options">
+                <button class="quiz-option btn-secondary">Débutant.e (quelques classiques)</button>
+                <button class="quiz-option btn-secondary">Curieux.se (déjà plusieurs jeux testés)</button>
+                <button class="quiz-option btn-secondary">Confirmé.e (passionné.e ou expert.e)</button>
+            </div>
+            <button class="quiz-next btn-primary">Question suivante</button>
+        </div>
+    </section>
+    <section class="question-7" id="question-7" style="display: none;">
+        <div class="quiz-header">
+            <p>Question 7/8</p>
+        </div>
+        <div class="question">
+            <h3>As-tu de la place pour stocker des jeux ?</h3>
+            <div class="quiz-options">
+                <button class="quiz-option btn-secondary">Petit format, facile à transporter</button>
+                <button class="quiz-option btn-secondary">Moyen format, jeu de plateau standard</button>
+                <button class="quiz-option btn-secondary">Peu importe la taille, si le jeu est bon</button>
+            </div>
+            <button class="quiz-next btn-primary">Question suivante</button>
+        </div>
+    </section>
+    <section class="question-8" id="question-8" style="display: none;">
+        <div class="quiz-header">
+            <p>Question 8/8</p>
+        </div>
+        <div class="question">
+            <h3>Tu préfères un jeu...</h3>
+            <div class="quiz-options">
+                <button class="quiz-option btn-secondary">Rejouable avec des variantes</button>
+                <button class="quiz-option btn-secondary">Avec une vraie histoire à suivre</button>
+                <button class="quiz-option btn-secondary">Facile à expliquer et à sortir souvent</button>
+            </div>
+            <button class="quiz-next btn-primary">Voir mes résultats</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-top">
+        <div class="newsletter">
+            <h2><img class="logo-meeplin" alt="Logo Meeplin" src="assets/logo-meeplin.png"></h2>
+            <p class="newsletter-phrase">Inscrivez-vous à notre newsletter pour rester informé des nouveautés et des fonctionnalités.</p>
+            <form class="newsletter-form">
+                <input id="email" type="email" placeholder="Entrez votre email" required>
+                <button type="submit" class="btn-secondary">S'abonner</button>
+            </form>
+            <p class="privacy-policy">En vous abonnant, vous acceptez notre Politique de Confidentialité et consentez à recevoir des mises à jour.</p>
+        </div>
+        <div class="footer-lists">
+            <div class="meeplin">
+                <h2>Meeplin</h2>
+                <ul>
+                    <li><a href="#">Questionnaire</a></li>
+                    <li><a href="#">Catalogue de jeux</a></li>
+                    <li><a href="#">Boutiques partenaires</a></li>
+                    <li><a href="#">Blogs et conseils</a></li>
+                    <li><a href="#">À propos</a></li>
+                </ul>
+            </div>
+            <div class="customer-service">
+                <h2>Service client</h2>
+                <ul>
+                    <li><a href="#">Centre d'aide</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                    <li><a href="#">Signaler un problème</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <h2>Suivez-nous</h2>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Meeplin. Tous droits réservés.</p>
+        <div class="footer-links">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+            <a href="#">Cookies</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

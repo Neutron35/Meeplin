@@ -61,4 +61,43 @@ document.addEventListener('DOMContentLoaded', function() {
             closeAccountModal();
         }
     });
+
+    // Sélectionne toutes les sections de questions
+    const totalQuestions = 8;
+
+    for (let i = 1; i <= totalQuestions; i++) {
+        const currentSection = document.getElementById(`question-${i}`);
+        if (!currentSection) continue;
+        const nextBtn = currentSection.querySelector('.quiz-next');
+        if (!nextBtn) continue;
+
+        nextBtn.addEventListener('click', function() {
+            // Masque la question actuelle
+            currentSection.style.display = 'none';
+            // Si c'est la dernière question, on repart à la première
+            let nextIndex = i === totalQuestions ? 1 : i + 1;
+            const nextSection = document.getElementById(`question-${nextIndex}`);
+            if (nextSection) {
+                nextSection.style.display = 'block';
+            }
+        });
+    }
+
+    // Gestion de la sélection d'une option de quiz
+    const allQuestions = document.querySelectorAll('section[id^="question-"]');
+    allQuestions.forEach(section => {
+      const options = section.querySelectorAll('.quiz-option');
+      options.forEach(option => {
+        option.addEventListener('click', function() {
+          // Réinitialise toutes les options de la question
+          options.forEach(btn => {
+            btn.style.backgroundColor = '';
+            btn.style.color = '';
+          });
+          // Applique la couleur sélectionnée
+          this.style.backgroundColor = '#FE7F2D';
+          this.style.color = '#fff';
+        });
+      });
+    });
 }); 
