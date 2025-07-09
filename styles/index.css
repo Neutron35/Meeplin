@@ -1,9 +1,9 @@
-*{
+* {
     box-sizing:border-box;
     margin:0;
     padding:0
 }
-body{
+body {
     font-family:Poppins,sans-serif;
     color:#121010;
     background-color:#f5e9e2;
@@ -11,80 +11,80 @@ body{
     margin:0 auto;
     font-size:16px
 }
-a{
+a {
     text-decoration:none;
     color:#121010
 }
-ul{
+ul {
     list-style:none;
     padding:0;
     margin:0
 }
-section{
+section {
     padding:0 48px;
     margin-bottom:72px
 }
-.logo-meeplin{
+.logo-meeplin {
     width:115px;
     height:60px;
     vertical-align:middle
 }
-.fa-chevron-right{
+.fa-chevron-right {
     margin-left:8px
 }
-.avatar{
+.avatar {
     width:48px;
     height:48px
 }
-header{
+header {
     padding:71px 48px 103px 48px;
     position:relative
 }
-nav{
+nav {
     display:flex;
     justify-content:space-between;
     align-items:center
 }
-.top-links{
+.top-links {
     display:none
 }
-.nav-links{
+.nav-links {
     list-style:none;
     display:flex;
     gap:43px;
     align-items:center
 }
-.btns-container{
+.btns-container {
     display:flex;
     gap:23px;
     align-items:center;
     font-size:15px
 }
-.btn-primary{
+.btn-primary {
     background-color:#fe7f2d;
     color:#fff;
     padding:8px 20px;
     border:#fe7f2d 1px solid;
     border-radius:40px
 }
-.btn-primary:hover{
+.btn-primary:hover {
     background-color:#7f4017;
     border:#7f4017 1px solid
 }
-.btn-secondary{
+.btn-secondary {
     padding:8px 20px;
     border:#fe7f2d 1px solid;
     border-radius:40px;
     background-color:#fff
 }
-.btn-secondary:hover{
+.btn-secondary:hover {
     background-color:#f5e9e2
 }
-.mobile-header{
+.mobile-header {
     display:flex;
     gap:10px
 }
-.burger{
+.burger {
     display:block;
     background:0 0;
     border:none;
@@ -94,10 +94,10 @@ nav{
     z-index:1001;
     transition:color .3s ease
 }
-.burger:hover{
+.burger:hover {
     color:#7f4017
 }
-.mobile-menu{
+.mobile-menu {
     position:fixed;
     top:0;
     left:0;
@@ -114,40 +114,40 @@ nav{
     visibility:hidden;
     transition:all .4s cubic-bezier(.4,0,.2,1)
 }
-.mobile-menu .nav-links{
+.mobile-menu .nav-links {
     flex-direction:column;
     gap:32px;
     margin-bottom:48px;
     text-align:center
 }
-.mobile-menu .nav-links li{
+.mobile-menu .nav-links li {
     opacity:0;
     transform:translateY(20px);
     transition:all .4s ease;
     transition-delay:.1s
 }
-.mobile-menu .nav-links li:nth-child(1){
+.mobile-menu .nav-links li:nth-child(1) {
     transition-delay:.1s
 }
-.mobile-menu .nav-links li:nth-child(2){
+.mobile-menu .nav-links li:nth-child(2) {
     transition-delay:.2s
 }
-.mobile-menu .nav-links li:nth-child(3){
+.mobile-menu .nav-links li:nth-child(3) {
     transition-delay:.3s
 }
-.mobile-menu .nav-links li:nth-child(4){
+.mobile-menu .nav-links li:nth-child(4) {
     transition-delay:.4s
 }
-.mobile-menu .nav-links a{
+.mobile-menu .nav-links a {
     font-size:24px;
     font-weight:500;
     color:#121010;
     transition:color .3s ease
 }
-.mobile-menu .nav-links a:hover{
+.mobile-menu .nav-links a:hover {
     color:#fe7f2d
 }
-.mobile-menu .btns-container{
+.mobile-menu .btns-container {
     flex-direction:column;
     gap:16px;
     opacity:0;
@@ -155,16 +155,16 @@ nav{
     transition:all .4s ease;
     transition-delay:.5s
 }
-.mobile-menu .btns-container a{
+.mobile-menu .btns-container a {
     font-size:18px;
     padding:12px 32px;
     min-width:200px;
     text-align:center
 }
-.burger .menu-icon{
+.burger .menu-icon {
     transition:transform .3s ease
 }
-.account-btn{
+.account-btn {
     display:block;
     background:0 0;
     border:none;
@@ -172,44 +172,44 @@ nav{
     color:#fe7f2d;
     cursor:pointer
 }
-.account-btn:focus,.account-btn:hover{
+.account-btn:focus,.account-btn:hover {
     color:#7f4017
 }
-.hero{
+.hero {
     text-align:center;
     display:flex;
     flex-direction:column-reverse;
     align-items:center;
     gap:19px
 }
-.hero-text{
+.hero-text {
     text-align:left
 }
-.hero-text h2{
+.hero-text h2 {
     font-size:40px;
     text-align:left
 }
-.hero-desc{
+.hero-desc {
     margin-top:21px;
     font-size:14px;
     text-align:left
 }
-.hero-btns{
+.hero-btns {
     margin-top:19px;
     justify-content:left
 }
-.hero-image{
+.hero-image {
     width:100%;
     aspect-ratio:1/1;
     object-fit:cover
 }
-.how-it-works h2{
+.how-it-works h2 {
     width:100%;
     text-align:left;
     font-size:32px;
     margin:0 0 27px 0
 }
-.steps{
+.steps {
     list-style:none;
     display:flex;
     flex-direction:column;
@@ -217,145 +217,145 @@ nav{
     gap:46px;
     text-align:center
 }
-.steps li{
+.steps li {
     display:flex;
     flex-direction:column;
     gap:16px
 }
-.steps-icon{
+.steps-icon {
     font-size:48px;
     color:#fe7f2d
 }
-.steps li h3{
+.steps li h3 {
     font-size:24px;
     font-weight:700;
     margin:0
 }
-.steps p{
+.steps p {
     margin:0;
     font-size:14px
 }
-.steps a{
+.steps a {
     margin-top:16px;
     align-self:center
 }
-.blog h2{
+.blog h2 {
     text-align:left;
     margin:0 auto 47px auto;
     font-size:32px
 }
-.articles{
+.articles {
     display:flex;
     flex-direction:column;
     gap:48px
 }
-.articles .article{
+.articles .article {
     display:block
 }
-.article-image{
+.article-image {
     width:100%;
     aspect-ratio:88/65;
     object-fit:cover
 }
-.article-cat{
+.article-cat {
     font-size:14px;
     margin-top:16px
 }
-.bold{
+.bold {
     font-weight:700
 }
-.article-title{
+.article-title {
     font-size:24px;
     margin-bottom:0
 }
-.article-desc{
+.article-desc {
     font-size:15px;
     margin-bottom:16px
 }
-.article-data{
+.article-data {
     display:flex;
     gap:16px;
     align-items:center;
     font-size:15px
 }
-.partners{
+.partners {
     display:flex;
     flex-direction:column;
     gap:48px;
     align-items:center
 }
-.partners-image{
+.partners-image {
     width:100%;
     aspect-ratio:1/1;
     object-fit:cover
 }
-.partners-text h2{
+.partners-text h2 {
     font-size:32px
 }
-.partners-desc{
+.partners-desc {
     margin:20px 0
 }
-.testimonials{
+.testimonials {
     display:flex;
     flex-direction:column;
     gap:48px
 }
-.testimonial-header h2{
+.testimonial-header h2 {
     font-size:32px;
     margin-bottom:12px
 }
-.testimonial-header p{
+.testimonial-header p {
     font-size:16px
 }
-.testimonial-content{
+.testimonial-content {
     width:100%
 }
-.testimonials blockquote{
+.testimonials blockquote {
     padding:32px;
     border:1px solid #fe7f2d;
     border-radius:20px;
     margin-bottom:28px
 }
-.testimonial-rating{
+.testimonial-rating {
     margin-bottom:24px;
     display:flex;
     gap:4px
 }
-.fa-star{
+.fa-star {
     color:#fe7f2d
 }
-.testimonial-quote{
+.testimonial-quote {
     margin-bottom:24px;
     font-size:14px
 }
-.testimonial-slider{
+.testimonial-slider {
     display:flex;
     justify-content:space-between;
     align-items:center
 }
-.testimonial-dots{
+.testimonial-dots {
     font-size:8px;
     display:flex;
     gap:8px
 }
-.dot-full{
+.dot-full {
     color:#fe7f2d
 }
-.dot-empty{
+.dot-empty {
     color:#121010;
     opacity:.2
 }
-.testimonial-btns{
+.testimonial-btns {
     display:flex;
     gap:16px;
     font-size:24px
 }
-.testimonial-btn{
+.testimonial-btn {
     padding:5px 12px;
     border:1px solid #fe7f2d;
     border-radius:50%
 }
-.about{
+.about {
     background:#444;
     color:#fff;
     padding:94px 48px;
@@ -364,24 +364,24 @@ nav{
     text-align:center;
     margin:0 25px 52px 25px
 }
-.about-text h2{
+.about-text h2 {
     font-size:24px;
     margin-bottom:24px
 }
-.about-text p{
+.about-text p {
     font-size:16px;
     margin-bottom:24px
 }
-.about-btn{
+.about-btn {
     background-color:#fff;
     color:#000;
     height:fit-content;
     padding:12px 24px
 }
-footer{
+footer {
     padding:0 45px 59px 45px
 }
-.footer-top{
+.footer-top {
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -389,60 +389,60 @@ footer{
     gap:48px;
     margin-bottom:48px
 }
-.newsletter{
+.newsletter {
     width:100%
 }
-.newsletter .logo-meeplin{
+.newsletter .logo-meeplin {
     margin-bottom:20px
 }
-.newsletter-form{
+.newsletter-form {
     margin:20px 0 12px 0;
     flex-direction:column;
     width:100%;
     max-width:400px;
     display:flex
 }
-.newsletter-form input{
+.newsletter-form input {
     margin:0 0 16px 0;
     width:100%;
     padding:12px;
     font-size:17px;
     border:1px solid #fe7f2d
 }
-.newsletter-form button{
+.newsletter-form button {
     width:100%;
     font-size:17px;
     padding:12px 24px;
     background-color:transparent
 }
-.privacy-policy{
+.privacy-policy {
     font-size:12px
 }
-.footer-lists{
+.footer-lists {
     display:flex;
     flex-direction:column;
     width:100%;
     gap:40px
 }
-.customer-service,.meeplin,.social{
+.customer-service,.meeplin,.social {
     padding-right:30px
 }
-.footer-lists h2{
+.footer-lists h2 {
     font-size:16px;
     margin-bottom:16px
 }
-.footer-lists li{
+.footer-lists li {
     padding:8px 0
 }
-.social-links a{
+.social-links a {
     display:flex;
     align-items:center
 }
-.fa-facebook,.fa-instagram{
+.fa-facebook,.fa-instagram {
     margin-right:12px;
     font-size:20px
 }
-.footer-bottom{
+.footer-bottom {
     border-top:1px solid #121010;
     display:flex;
     flex-direction:column-reverse;
@@ -450,20 +450,20 @@ footer{
     gap:32px;
     font-size:14px
 }
-.footer-links{
+.footer-links {
     display:flex;
     flex-direction:column;
     gap:24px
 }
-.footer-links a{
+.footer-links a {
     text-decoration:underline
 }
-@media (min-width:1150px){
-    .account-btn{
+@media (min-width:1150px) {
+    .account-btn {
         display:none
     }
 }
-.account-modal{
+.account-modal {
     position:fixed;
     top:0;
     left:0;
@@ -477,11 +477,11 @@ footer{
     pointer-events:none;
     transition:opacity .3s
 }
-.account-modal[aria-hidden=false]{
+.account-modal[aria-hidden=false] {
     opacity:1;
     pointer-events:auto
 }
-.account-modal-backdrop{
+.account-modal-backdrop {
     position:absolute;
     top:0;
     left:0;
@@ -490,7 +490,7 @@ footer{
     background:rgba(0,0,0,.35);
     z-index:1
 }
-.account-modal-content{
+.account-modal-content {
     position:relative;
     z-index:2;
     background:#fff;
@@ -504,17 +504,17 @@ footer{
     align-items:center;
     animation:modalIn .3s cubic-bezier(.4,0,.2,1)
 }
-@keyframes modalIn{
-    from{
+@keyframes modalIn {
+    from {
         transform:scale(.95);
         opacity:0
     }
-    to{
+    to {
         transform:scale(1);
         opacity:1
     }
 }
-.account-modal-close{
+.account-modal-close {
     position:absolute;
     top:12px;
     right:16px;
@@ -525,172 +525,172 @@ footer{
     cursor:pointer;
     z-index:3
 }
-.account-modal-close:hover{
+.account-modal-close:hover {
     color:#fe7f2d
 }
-.account-modal-content h2{
+.account-modal-content h2 {
     font-size:22px;
     margin-bottom:28px;
     color:#fe7f2d
 }
-.account-modal-btns{
+.account-modal-btns {
     display:flex;
     flex-direction:column;
     gap:18px;
     width:100%
 }
-.account-modal-btns .btn-primary,.account-modal-btns .btn-secondary{
+.account-modal-btns .btn-primary,.account-modal-btns .btn-secondary {
     width:100%;
     font-size:17px;
     padding:12px 0;
     text-align:center
 }
-@media (min-width:768px){
-    section{
+@media (min-width:768px) {
+    section {
         padding:0 48px;
         margin-bottom:72px
     }
-    header{
+    header {
         padding:71px 48px 103px 48px;
         font-size:14px
     }
-    .nav-links{
+    .nav-links {
         gap:20px
     }
-    .btns-container{
+    .btns-container {
         gap:16px
     }
-    .hero{
+    .hero {
         gap:60px
     }
-    .hero-text h2{
+    .hero-text h2 {
         font-size:36px
     }
-    .hero-desc{
+    .hero-desc {
         font-size:16px
     }
-    .hero-btns{
+    .hero-btns {
         margin-top:16px
     }
-    .how-it-works h2{
+    .how-it-works h2 {
         width:100%;
         text-align:center;
         font-size:36px;
         margin:0 0 27px 0
     }
-    .steps{
+    .steps {
         gap:32px
     }
-    .steps li{
+    .steps li {
         flex:1;
         display:flex;
         flex-direction:column;
         gap:16px
     }
-    .blog h2{
+    .blog h2 {
         font-size:36px
     }
-    .partners-text h2{
+    .partners-text h2 {
         font-size:36px
     }
-    .testimonial-header h2{
+    .testimonial-header h2 {
         font-size:36px
     }
-    .testimonial-header p{
+    .testimonial-header p {
         font-size:16px
     }
-    .testimonial-quote{
+    .testimonial-quote {
         font-size:14px
     }
-    .about{
+    .about {
         padding:54px 48px
     }
-    .about-text h2{
+    .about-text h2 {
         font-size:28px
     }
-    .about-text p{
+    .about-text p {
         font-size:16px
     }
-    .about-btn{
+    .about-btn {
         font-size:14px
     }
-    .newsletter-phrase{
+    .newsletter-phrase {
         font-size:14px
     }
-    .newsletter-form input{
+    .newsletter-form input {
         font-size:16px
     }
-    .newsletter-form button{
+    .newsletter-form button {
         font-size:16px
     }
-    .privacy-policy{
+    .privacy-policy {
         font-size:11px
     }
-    footer{
+    footer {
         padding:0 48px 59px 48px
     }
-    .newsletter-form input{
+    .newsletter-form input {
         font-size:16px
     }
-    .newsletter-form button{
+    .newsletter-form button {
         font-size:16px
     }
-    .footer-lists h2{
+    .footer-lists h2 {
         font-size:14px
     }
-    .footer-lists li{
+    .footer-lists li {
         font-size:14px;
         padding:4px 0
     }
-    .fa-facebook,.fa-instagram{
+    .fa-facebook,.fa-instagram {
         font-size:18px
     }
-    .footer-bottom{
+    .footer-bottom {
         font-size:12px
     }
 }
-@media (min-width:1150px){
-    .top-links{
+@media (min-width:1150px) {
+    .top-links {
         display:flex;
         gap:39px
     }
-    section{
+    section {
         padding:0 96px;
         margin-bottom:112px
     }
-    header{
+    header {
         padding:71px 96px 103px 79px
     }
-    .burger{
+    .burger {
         display:none
     }
-    .hero{
+    .hero {
         flex-direction:row;
         align-items:center;
         gap:120px
     }
-    .hero-desc{
+    .hero-desc {
         font-size:18px;
         text-align:left
     }
-    .hero-text h2{
+    .hero-text h2 {
         font-size:48px;
         text-align:left
     }
-    .hero-btns{
+    .hero-btns {
         margin-top:20px;
         justify-content:flex-start
     }
-    .hero-image{
+    .hero-image {
         width:49%
     }
-    .how-it-works h2{
+    .how-it-works h2 {
         width:824px;
         text-align:center;
         font-size:40px;
         margin:0 auto 56px auto
     }
-    .steps{
+    .steps {
         display:grid;
         grid-template-columns:repeat(3,1fr);
         text-align:center;
@@ -699,135 +699,135 @@ footer{
         justify-items:center;
         align-items:start
     }
-    .steps li{
+    .steps li {
         display:contents
     }
-    .steps-icon{
+    .steps-icon {
         grid-row:1
     }
-    .steps li h3{
+    .steps li h3 {
         grid-row:2;
         align-self:center
     }
-    .steps p{
+    .steps p {
         grid-row:3;
         font-size:16px
     }
-    .steps a{
+    .steps a {
         grid-row:4;
         align-self:end
     }
-    .blog h2{
+    .blog h2 {
         font-size:40px
     }
-    .articles{
+    .articles {
         display:grid;
         grid-template-columns:repeat(3,1fr);
         column-gap:24px;
         row-gap:8px
     }
-    .articles .article{
+    .articles .article {
         display:contents
     }
-    .article-image{
+    .article-image {
         grid-row:1;
         aspect-ratio:50/37
     }
-    .article-cat{
+    .article-cat {
         grid-row:2
     }
-    .article-title{
+    .article-title {
         grid-row:3
     }
-    .article-desc{
+    .article-desc {
         grid-row:4
     }
-    .article-data{
+    .article-data {
         grid-row:5
     }
-    .partners{
+    .partners {
         flex-direction:row;
         gap:130px
     }
-    .partners-image{
+    .partners-image {
         width:49%;
         aspect-ratio:204/151
     }
-    .partners-text h2{
+    .partners-text h2 {
         font-size:40px
     }
-    .testimonials{
+    .testimonials {
         flex-direction:row;
         justify-content:space-between;
         gap:0
     }
-    .testimonial-header h2{
+    .testimonial-header h2 {
         font-size:40px;
         margin-bottom:0
     }
-    .testimonial-header p{
+    .testimonial-header p {
         font-size:18px
     }
-    .testimonial-content{
+    .testimonial-content {
         width:47%
     }
-    .testimonial-quote{
+    .testimonial-quote {
         font-size:16px
     }
-    .about{
+    .about {
         margin:0 96px 112px 96px;
         padding:54px 106px;
         flex-direction:row;
         text-align:left
     }
-    .about-text h2{
+    .about-text h2 {
         font-size:33px;
         margin-bottom:0
     }
-    .about-text p{
+    .about-text p {
         font-size:20px;
         margin-bottom:0
     }
-    footer{
+    footer {
         padding:0 94px 63px 80px
     }
-    .footer-top{
+    .footer-top {
         flex-direction:row;
         align-items:flex-start;
         justify-content:space-between;
         gap:0;
         margin-bottom:76px
     }
-    .newsletter{
+    .newsletter {
         width:41%
     }
-    .newsletter .logo-meeplin{
+    .newsletter .logo-meeplin {
         margin-bottom:36px
     }
-    .newsletter-form{
+    .newsletter-form {
         margin:24px 0 12px 0;
         flex-direction:row;
         width:100%;
         max-width:none
     }
-    .newsletter-form input{
+    .newsletter-form input {
         margin:0 16px 0 0;
         width:auto;
         flex-grow:1
     }
-    .newsletter-form button{
+    .newsletter-form button {
         width:auto
     }
-    .footer-lists{
+    .footer-lists {
         flex-direction:row;
         width:auto
     }
-    .footer-bottom{
+    .footer-bottom {
         flex-direction:row;
         padding-top:32px;
         gap:0
     }
-    .footer-links{
+    .footer-links {
         flex-direction:row
     }
 }
