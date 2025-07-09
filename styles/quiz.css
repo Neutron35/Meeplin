@@ -226,6 +226,7 @@ nav {
 .question h3 {
     padding: 0 30px;
     text-align: center;
+    font-size: 24px;
 }
 .quiz-options {
     display: flex;
@@ -484,7 +485,7 @@ footer {
         font-size: 40px;
     }
     .question h3 {
-        font-size: 24px;
+        font-size: 29px;
     }
     .quiz-options {
         padding: 0;
