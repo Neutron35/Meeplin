@@ -728,6 +728,7 @@ footer {
         align-self:end
     }
     .blog h2 {
+        text-align:center;
         font-size:40px
     }
     .articles {
