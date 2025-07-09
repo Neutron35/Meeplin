@@ -6,7 +6,7 @@
 body {
     font-family:Poppins,sans-serif;
     color:#121010;
-    background-color:#f5e9e2;
+    background-color:white;
     max-width:1440px;
     margin:0 auto;
     font-size:16px
@@ -21,7 +21,7 @@ ul {
     margin:0
 }
 section {
-    padding:0 48px;
+    padding:0 25px;
     margin-bottom:72px
 }
 .logo-meeplin {
@@ -37,7 +37,7 @@ section {
     height:48px
 }
 header {
-    padding:71px 48px 103px 48px;
+    padding:71px 25px 103px 8px;
     position:relative
 }
 nav {
@@ -186,7 +186,7 @@ nav {
     text-align:left
 }
 .hero-text h2 {
-    font-size:40px;
+    font-size:30px;
     text-align:left
 }
 .hero-desc {
@@ -206,7 +206,7 @@ nav {
 .how-it-works h2 {
     width:100%;
     text-align:left;
-    font-size:32px;
+    font-size:30px;
     margin:0 0 27px 0
 }
 .steps {
@@ -227,7 +227,7 @@ nav {
     color:#fe7f2d
 }
 .steps li h3 {
-    font-size:24px;
+    font-size:22px;
     font-weight:700;
     margin:0
 }
@@ -242,7 +242,7 @@ nav {
 .blog h2 {
     text-align:left;
     margin:0 auto 47px auto;
-    font-size:32px
+    font-size:30px
 }
 .articles {
     display:flex;
@@ -290,7 +290,7 @@ nav {
     object-fit:cover
 }
 .partners-text h2 {
-    font-size:32px
+    font-size:30px
 }
 .partners-desc {
     margin:20px 0
@@ -301,7 +301,7 @@ nav {
     gap:48px
 }
 .testimonial-header h2 {
-    font-size:32px;
+    font-size:30px;
     margin-bottom:12px
 }
 .testimonial-header p {
